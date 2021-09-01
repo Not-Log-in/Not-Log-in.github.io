@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href='../aaa.html'>123123</a>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+			.fahter{
+				width: 100%;
+				height: 100vh;
+				position: relative;
+				background-color: #ccc;
+				padding: 40px;
+				box-sizing: border-box;
+			}
+			.son{
+				width: 20px;
+				height: 80px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fahter">
+			<div class="son"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var a = document.getElementsByClassName("fahter")[0];
+		a.innerHTML="<div class='son'></div>";
+		var a = parseInt(Math.random()*800);
+		let random = a;
+		console.log(random);
+		console.log(random);
+	</script>
 </html>
