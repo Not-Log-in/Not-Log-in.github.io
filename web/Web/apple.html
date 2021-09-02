@@ -6,13 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-image: url(../Web/images/apple.jpg);
-            background-size: 100%;
+        @media (max-width:756px){
+            .Go{
+                display: inline-block;
+                font-size: 50px;
+                margin: auto;
+            }
         }
+        @media (min-width:1199px) {
+            .Go{
+                display: none;
+            }
+            *{
+            margin: 0;
+            padding: 0;
+            }
+            div{
+                margin: 0 auto;
+                background-image: url(../Web/images/apple.jpg);
+                background-size: 100%;
+                width: auto;
+                height: 100vh;
+            }
+        }
+        
     </style>
 </head>
 <body>
-    
+    <div class="Go">请使用电脑打开此网站</div>
+    <div></div>
 </body>
 </html>
