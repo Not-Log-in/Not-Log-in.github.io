@@ -101,26 +101,47 @@
         <div class="list"></div>
         <div class="list"></div>
         <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
+        <div class="list"></div>
     </nav>
-    <script>
-        var a = document.querySelectorAll(".nav > div");
-        let num = 0;
-        for(var i = 0; i <a.length; i++){
-            var pointA = a[i];
-            pointA.index = i;
-            pointA.onmousemove = function(){
-                num = this.index;
-                for(var j = 0; j < a.length; j++){
-                    a[j].className="list";
-                }
-                a[num].className="boxlist";
+   <script>
+       
+    var a = document.querySelectorAll(".nav > div");
+    let num = 0;
+    for(var i = 0; i <a.length; i++){
+        var pointA = a[i];
+        pointA.index = i;
+        pointA.onmousemove = function(){
+            num = this.index;
+            for(var j = 0; j < a.length; j++){
+                a[j].className="list";
+                a[j].style.height="5vh";
             }
-            pointA.onmouseout = function(){
-                for(var j = 0; j < a.length; j++){
-                    a[j].className="list";
-                }
+            a[num].className="boxlist";
+            a[num].style.height="8vh";
+            a[num-1].className="boxlist";
+            a[num-1].style.height="7vh";
+            a[num-2].className="boxlist";
+            a[num-2].style.height="6vh";
+            a[num+1].className="boxlist";
+            a[num+1].style.height="7vh";
+            a[num+2].className="boxlist";
+            a[num+2].style.height="6vh";
+        }
+        pointA.onmouseout = function(){
+            for(var j = 0; j < a.length; j++){
+                a[j].className="list";
+                a[j].style.height="5vh";
             }
         }
-    </script>
+    }
+   </script>
 </body>
 </html>
