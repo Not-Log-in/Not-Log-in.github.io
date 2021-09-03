@@ -70,7 +70,7 @@
                 height: 3vh;
             }
             .nav > div{
-                transition: all .2s ease-out;
+                transition: all .3s ease-out;
             }
             .nav > .list
             {
@@ -125,12 +125,16 @@
     for(var i = 0; i <a.length; i++){
         var pointA = a[i];
         pointA.index = i;
+        pointA.onclick = function(){
+            a[num].style.background="white";
+        }
         pointA.onmousemove = function(){
             num = this.index;
             for(var j = 0; j < a.length; j++){
                 a[j].className="list";
                 a[j].style.height="5vh";
-                a[j].style.width="5vh";
+                a[j].style.height="5vh";
+                a[j].style.background="black";
             }
             a[num].className="boxlist";
             a[num].style.height="8vh";
