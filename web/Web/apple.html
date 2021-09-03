@@ -70,7 +70,7 @@
                 height: 3vh;
             }
             .nav > div{
-                transition: all .3s ease-out;
+                transition: all .2s ease-out;
             }
             .nav > .list
             {
@@ -130,6 +130,7 @@
             for(var j = 0; j < a.length; j++){
                 a[j].className="list";
                 a[j].style.height="5vh";
+                a[j].style.width="5vh";
             }
             a[num].className="boxlist";
             a[num].style.height="8vh";
@@ -141,6 +142,11 @@
             a[num+1].style.height="7vh";
             a[num+2].className="boxlist";
             a[num+2].style.height="6vh";
+            a[num].style.width="7vh";
+            a[num-1].style.width="6.5vh";
+            a[num-2].style.width="6vh";
+            a[num+1].style.width="6.5vh";
+            a[num+2].style.width="6vh";
         }
         pointA.onmouseout = function(){
             for(var j = 0; j < a.length; j++){
