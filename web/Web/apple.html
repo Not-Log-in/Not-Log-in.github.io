@@ -17,6 +17,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+
             }
         }
         @media (min-width:1199px) {
@@ -124,16 +125,11 @@
     for(var i = 0; i <a.length; i++){
         var pointA = a[i];
         pointA.index = i;
-        pointA.onclick = function(){
-            a[num].style.background="white";
-        }
         pointA.onmousemove = function(){
             num = this.index;
             for(var j = 0; j < a.length; j++){
                 a[j].className="list";
                 a[j].style.height="5vh";
-                a[j].style.height="5vh";
-                a[j].style.background="black";
             }
             a[num].className="boxlist";
             a[num].style.height="8vh";
@@ -145,11 +141,6 @@
             a[num+1].style.height="7vh";
             a[num+2].className="boxlist";
             a[num+2].style.height="6vh";
-            a[num].style.width="7vh";
-            a[num-1].style.width="6.5vh";
-            a[num-2].style.width="6vh";
-            a[num+1].style.width="6.5vh";
-            a[num+2].style.width="6vh";
         }
         pointA.onmouseout = function(){
             for(var j = 0; j < a.length; j++){
