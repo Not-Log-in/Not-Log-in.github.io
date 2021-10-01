@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mac页面(未开发完毕)</title>
     <style>
-        @media (max-width:1198px){
-            div{
+        @media (max-width:1198px) {
+            div {
                 display: none;
             }
-            .Go{
+            .Go {
                 display: inline-block;
                 font-size: 50px;
                 margin: auto;
             }
-            body{
+            body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
             }
         }
+        
         @media (min-width:1199px) {
-            div{
+            div {
                 display: inline-block;
             }
-            .Go{
+            .Go {
                 display: none;
             }
-            *{
-            margin: 0;
-            padding: 0;
+            * {
+                margin: 0;
+                padding: 0;
             }
-            body{
+            body {
                 overflow: hidden;
                 margin: 0 auto;
-                background-image: url(../Web/images/apple.jpg);
+                background-image: url(images/apple.jpg);
                 background-size: 100%;
                 width: auto;
                 display: flex;
@@ -44,7 +46,7 @@
                 align-items: flex-end;
                 height: 100vh;
             }
-            .nav{
+            .nav {
                 width: 90%;
                 /* padding-left: 40px;
                 padding-right: 40px;
@@ -55,35 +57,34 @@
                 position: absolute;
                 bottom: 10px;
                 margin: 0 auto;
-                background:rgba(113, 105, 108, 0.6);
+                background: rgba(113, 105, 108, 0.6);
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
             }
-            .title{
+            .title {
                 width: 100%;
                 height: 3.5vh;
                 position: absolute;
                 top: 0px;
                 margin: 0 auto;
-                background-color:#E2DEEB;
+                background-color: #E2DEEB;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
-            .title ul > li> svg
-            {
+            .title ul>li>svg {
                 /* padding-left: 20px; */
                 width: 3vh;
                 height: 3vh;
             }
-            .title ul{
+            .title ul {
                 /* background: black; */
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex;
             }
-            .title ul > li{
+            .title ul>li {
                 margin-left: 30px;
                 font-size: 10px;
                 font-weight: 200px;
@@ -92,13 +93,12 @@
                 /* background: red; */
                 user-select: none;
             }
-            .nav > div{
+            .nav>div {
                 transition: all .1s ease-out;
                 bottom: 0.5vh;
                 position: relative;
             }
-            .nav > .list
-            {
+            .nav>.list {
                 border-radius: 10px;
                 margin: 2px;
                 width: 5.5vh;
@@ -106,8 +106,7 @@
                 overflow: hidden;
                 /* background-color: black; */
             }
-            .boxlist
-            {
+            .boxlist {
                 border-radius: 15px;
                 overflow: hidden;
                 margin: 2px;
@@ -115,48 +114,53 @@
                 height: 8vh;
                 /* background-color: black; */
             }
-            .nav > div > *{
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-        }
-        .father{
-            position: relative;
-            bottom: 13vh;
-            border-radius: 5px;
-            width: 120vh;
-            height: 80vh;
-            background: #ccc;
-            display: none;
-            animation: a 0.5s infinite;
-            animation-iteration-count: 1;
-        }
-        @keyframes a{
-            0%{transform: translateY(1000px);
-            width: 0vh; height: 0vh;}
-            100%{transform: translateY(0px);
+            .nav>div>* {
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+            }
+            .father {
+                position: relative;
+                bottom: 13vh;
+                border-radius: 5px;
                 width: 120vh;
-            height: 80vh;}
-        }
-        .block{
-            float: right;
-            padding-right: 20px;
-            user-select: none;
-            font-size: 40px;
+                height: 80vh;
+                background: #ccc;
+                display: none;
+                animation: a 0.5s infinite;
+                animation-iteration-count: 1;
+            }
+            @keyframes a {
+                0% {
+                    transform: translateY(1000px);
+                    width: 0vh;
+                    height: 0vh;
+                }
+                100% {
+                    transform: translateY(0px);
+                    width: 120vh;
+                    height: 80vh;
+                }
+            }
+            .block {
+                float: right;
+                padding-right: 20px;
+                user-select: none;
+                font-size: 40px;
             }
             /*-------------------------------*/
-            .titleulright{
-            margin-right: 20px;
+            .titleulright {
+                margin-right: 20px;
             }
-            .titleulright li > img{
+            .titleulright li>img {
                 width: 3vh;
                 height: 3vh;
             }
-            .text{ 
-            padding-top: 5px;
-            box-sizing: border-box;
+            .text {
+                padding-top: 5px;
+                box-sizing: border-box;
             }
-            .A{
+            .A {
                 display: inline-block;
                 width: 20px;
                 height: 20px;
@@ -166,7 +170,7 @@
                 color: white;
                 margin-bottom: 5px;
             }
-            .electricborder{
+            .electricborder {
                 width: 35px;
                 box-sizing: border-box;
                 height: 18px;
@@ -178,13 +182,13 @@
                 align-items: center;
                 overflow: hidden;
             }
-            .electricborder > .electric{
+            .electricborder>.electric {
                 width: 100%;
                 height: 80%;
                 border-radius: 0px;
                 background: black;
             }
-            .electricborder::before{
+            .electricborder::before {
                 content: '';
                 position: absolute;
                 width: 0;
@@ -197,21 +201,19 @@
                 border-right: 2px solid black;
                 border-bottom: 2px solid transparent;
             }
-            .textA{
+            .textA {
                 display: flex;
                 flex-direction: row;
-                
             }
-            .textA > div:first-child{
+            .textA>div:first-child {
                 margin-right: 5px;
                 font-family: "微软雅黑";
                 font-size: 13px;
             }
         }
-        
-        
     </style>
 </head>
+
 <body>
     <div class="Go">请使用电脑打开此网站</div>
     <nav class="title">
@@ -231,17 +233,17 @@
             <li class="text"></li>
             <li class="text">
                 <div class="textA">
-                <div class="dl">100</div>
-                <div class="electricborder">
-                    <div class="electric">
+                    <div class="dl">100</div>
+                    <div class="electricborder">
+                        <div class="electric">
+                        </div>
                     </div>
                 </div>
-            </div>
             </li>
             <li class="text">
                 <span class="A">A</span>
             </li>
-            
+
             <li class="text">
                 <b>
                 <span class="zhou">周五</span>
@@ -259,211 +261,214 @@
                 <svg t="1630744121635" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2185" width="200" height="200"><path d="M960.620725 848.835765H279.118607a127.096471 127.096471 0 0 0-122.88-94.750118c-70.113882 0-127.036235 56.621176-127.036235 126.313412s56.922353 126.373647 126.976 126.373647c59.030588 0 108.845176-40.357647 122.940235-94.750118h681.502118a31.683765 31.683765 0 1 0 0-63.247059zM156.178372 943.585882c-34.996706 0-63.488-28.310588-63.488-63.186823 0-34.816 28.491294-63.186824 63.488-63.186824 35.056941 0 63.488 28.310588 63.488 63.186824 0 34.816-28.431059 63.186824-63.488 63.186823zM961.223078 493.327059h-97.882353a127.096471 127.096471 0 0 0-245.880471 0H65.102607a31.683765 31.683765 0 0 0-31.804235 31.563294c0 17.468235 14.215529 31.563294 31.744 31.563294h552.357647a127.096471 127.096471 0 0 0 245.940706 0h97.882353a31.623529 31.623529 0 1 0 0-63.126588z m-220.822589 94.750117c-34.996706 0-63.488-28.310588-63.488-63.247058 0-34.816 28.491294-63.126588 63.488-63.126589 34.996706 0 63.488 28.310588 63.488 63.186824 0 34.816-28.491294 63.186824-63.488 63.186823zM156.178372 295.695059c59.030588 0 108.845176-40.357647 122.940235-94.750118h681.502118a31.623529 31.623529 0 1 0 0-63.186823H279.118607A127.096471 127.096471 0 0 0 29.202372 169.381647c0 69.632 56.922353 126.313412 126.976 126.313412z m0-189.500235c35.056941 0 63.488 28.310588 63.488 63.186823 0 34.816-28.431059 63.126588-63.488 63.126588-34.996706 0-63.488-28.310588-63.488-63.126588 0-34.936471 28.491294-63.247059 63.488-63.247059z" p-id="2186"></path></svg>
             </li>
         </ul>
-        </nav>
+    </nav>
     <div id="drag" class="father">
         <div class="block">*</div>
     </div>
     <nav class="nav">
         <div class="list">
-            <img src="../Web/images/apple笑脸.png" alt="">
+            <img src="images/apple笑脸.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/appleHJ.png" alt="">
+            <img src="images/appleHJ.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple商城1.png" alt="">
+            <img src="images/apple商城1.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple联系人.png" alt="">
+            <img src="images/apple联系人.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple日历.png" alt="">
+            <img src="images/apple日历.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple备忘录.png" alt="">
+            <img src="images/apple备忘录.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple笔记.png" alt="">
+            <img src="images/apple笔记.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple相册.png" alt="">
+            <img src="images/apple相册.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple信息.png" alt="">
+            <img src="images/apple信息.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple地图.png" alt="">
+            <img src="images/apple地图.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple电话.png" alt="">
+            <img src="images/apple电话.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple相册.png" alt="">
+            <img src="images/apple相册.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple阅读.png" alt="">
+            <img src="images/apple阅读.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple商城.png" alt="">
+            <img src="images/apple商城.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple设置.png" alt="">
+            <img src="images/apple设置.png" alt="">
         </div>
         <div class="list">
-            <img src="../Web/images/apple回收站.png" alt="">
+            <img src="images/apple回收站.png" alt="">
         </div>
     </nav>
-   <script>
-       var dl = document.getElementsByClassName("dl")[0];
-       var electric = document.getElementsByClassName("electric")[0];
-       var electricborder = document.getElementsByClassName("electricborder")[0];
-       var electric = document.getElementsByClassName("electric")[0];
-       var dianliang = 100;
-       function time(){
-            dianliang -=1;
-            dl.innerHTML=dianliang+"%";
-            electric.style.width = dianliang+"%";
-            if(dianliang <= 0){
-                dl.innerHTML="电量过低";
-                electricborder.style.border="2px solid red"
+    <script>
+        var dl = document.getElementsByClassName("dl")[0];
+        var electric = document.getElementsByClassName("electric")[0];
+        var electricborder = document.getElementsByClassName("electricborder")[0];
+        var electric = document.getElementsByClassName("electric")[0];
+        var dianliang = 100;
+
+        function time() {
+            dianliang -= 1;
+            dl.innerHTML = dianliang + "%";
+            electric.style.width = dianliang + "%";
+            if (dianliang <= 0) {
+                dl.innerHTML = "电量过低";
+                electricborder.style.border = "2px solid red"
             }
-            if(dianliang < 30){
-                electric.style.background="red";
+            if (dianliang < 30) {
+                electric.style.background = "red";
             }
         }
-        setInterval("time()",1000);
+        setInterval("time()", 1000);
         var zhou = document.getElementsByClassName("zhou")[0];
         var shi = document.getElementsByClassName("shi")[0];
         var fen = document.getElementsByClassName("fen")[0];
         var A = document.getElementsByClassName("A")[0];
         let Asum = 0;
-        A.onclick = function(){
+        A.onclick = function() {
             Asum++;
-            if(Asum % 2 === 0){
-                A.innerHTML="A"
-            }else{
-                A.innerHTML="B"
+            if (Asum % 2 === 0) {
+                A.innerHTML = "A"
+            } else {
+                A.innerHTML = "B"
             }
         }
-        function GoTimeNowClient(){
+
+        function GoTimeNowClient() {
             const date = new Date();
             var zhou1 = date.getDay();
             let day;
-            switch(zhou1){
-                    case 1:
-                        day="一";
-                        break;
-                    case 2:
-                        day="二";
-                        break;
-                    case 3:
-                        day ="三";
-                        break;
-                    case 4:
-                        day="四";
-                        break;
-                    case 5:
-                        day = "五";
-                        break;
-                    case 6:
-                        day="六";
-                        break;
-                    case 7:
-                        day = "日";
-                        break;
+            switch (zhou1) {
+                case 1:
+                    day = "一";
+                    break;
+                case 2:
+                    day = "二";
+                    break;
+                case 3:
+                    day = "三";
+                    break;
+                case 4:
+                    day = "四";
+                    break;
+                case 5:
+                    day = "五";
+                    break;
+                case 6:
+                    day = "六";
+                    break;
+                case 7:
+                    day = "日";
+                    break;
             }
-                var shi1 = date.getHours();
-                var fen1 = date.getMinutes();
-                zhou.innerHTML="周"+day;
-                shi.innerHTML=shi1;
-                fen.innerHTML = fen1;
-            }
-            setInterval("GoTimeNowClient()",10);
-       
-       window.onload = function(){
-			// var box = document.getElementById("box");
-			var drag = document.getElementById("drag");
-			// var scale = document.getElementById("scale");
-			// mousedown mouseove mouseup
-			// 拖拽
-			fragTool(drag);
-			function fragTool(node){
-				node.onmousedown = function(ev){
-					// 浏览器的兼容
-					var e = ev || window.event;
-					// console.log(e);
-					var offsetX = e.clientX - node.offsetLeft;
-					var offsetY = e.clientY - node.offsetTop;
-					document.onmousemove = function(ev){
-						var e = ev || window.event;
-						//定义 currentLeft
-						var currentLeft = e.clientX - offsetX;
-						//定义 currentTop
-						var currentTop = e.clientY - offsetY;
-						//当前被拖拽元素的 left 和 top 值
-						node.style.left = (currentLeft-322) + "px";
-						node.style.top = (currentTop-153) + "px";
-					}
-				}
-				document.onmouseup = function(){
-					document.onmousemove = null;
-				}
-			}
-		}
-    var a = document.querySelectorAll(".nav > div");
-    var father = document.getElementsByClassName("father")[0];
-    var block = document.getElementsByClassName("block")[0];
-    let num = 0;
-    let sum = 1;
-    block.onclick = function(){
-        father.style.display="none";
-    }
-    for(var i = 0; i <a.length; i++){
-        var pointA = a[i];
-        pointA.index = i;
-        pointA.onclick = function(){
-            sum++;
-            a[num].style.background="white";
-            // if(sum % 2 === 0){
-                father.style.display="inline-block";
-            // }else{
-            //     father.style.display="none";
-            //     father.style.animation="b 0.5s infinite;"
-            // }
+            var shi1 = date.getHours();
+            var fen1 = date.getMinutes();
+            zhou.innerHTML = "周" + day;
+            shi.innerHTML = shi1;
+            fen.innerHTML = fen1;
         }
-        pointA.onmousemove = function(){
-            num = this.index;
-            for(var j = 0; j < a.length; j++){
-                a[j].className="list";
-                a[j].style.height="5.5vh";
-                a[j].style.width="5.5vh";
-                a[j].style.background="none";
-            }
-            a[num].className="boxlist";
-            a[num].style.height="8vh";
-            a[num].style.width="7vh";
-            a[num-1].className="boxlist";
-            a[num-1].style.height="7vh";
-            a[num-2].className="boxlist";
-            a[num-2].style.height="6vh";
-            a[num+1].className="boxlist";
-            a[num+1].style.height="7vh";
-            a[num+2].className="boxlist";
-            a[num+2].style.height="6vh";
-            a[num-1].style.width="6.5vh";
-            a[num-2].style.width="6vh";
-            a[num+1].style.width="6.5vh";
-            a[num+2].style.width="6vh";
-        }
-        pointA.onmouseout = function(){
-            for(var j = 0; j < a.length; j++){
-                a[j].className="list";
-                a[j].style.height="5.5vh";
-                a[j].style.width="5.5vh";
+        setInterval("GoTimeNowClient()", 10);
+
+        window.onload = function() {
+            // var box = document.getElementById("box");
+            var drag = document.getElementById("drag");
+            // var scale = document.getElementById("scale");
+            // mousedown mouseove mouseup
+            // 拖拽
+            fragTool(drag);
+
+            function fragTool(node) {
+                node.onmousedown = function(ev) {
+                    // 浏览器的兼容
+                    var e = ev || window.event;
+                    // console.log(e);
+                    var offsetX = e.clientX - node.offsetLeft;
+                    var offsetY = e.clientY - node.offsetTop;
+                    document.onmousemove = function(ev) {
+                        var e = ev || window.event;
+                        //定义 currentLeft
+                        var currentLeft = e.clientX - offsetX;
+                        //定义 currentTop
+                        var currentTop = e.clientY - offsetY;
+                        //当前被拖拽元素的 left 和 top 值
+                        node.style.left = (currentLeft - 322) + "px";
+                        node.style.top = (currentTop - 153) + "px";
+                    }
+                }
+                document.onmouseup = function() {
+                    document.onmousemove = null;
+                }
             }
         }
-    }
-    
-   </script>
+        var a = document.querySelectorAll(".nav > div");
+        var father = document.getElementsByClassName("father")[0];
+        var block = document.getElementsByClassName("block")[0];
+        let num = 0;
+        let sum = 1;
+        block.onclick = function() {
+            father.style.display = "none";
+        }
+        for (var i = 0; i < a.length; i++) {
+            var pointA = a[i];
+            pointA.index = i;
+            pointA.onclick = function() {
+                sum++;
+                a[num].style.background = "white";
+                // if(sum % 2 === 0){
+                father.style.display = "inline-block";
+                // }else{
+                //     father.style.display="none";
+                //     father.style.animation="b 0.5s infinite;"
+                // }
+            }
+            pointA.onmousemove = function() {
+                num = this.index;
+                for (var j = 0; j < a.length; j++) {
+                    a[j].className = "list";
+                    a[j].style.height = "5.5vh";
+                    a[j].style.width = "5.5vh";
+                    a[j].style.background = "none";
+                }
+                a[num].className = "boxlist";
+                a[num].style.height = "8vh";
+                a[num].style.width = "7vh";
+                a[num - 1].className = "boxlist";
+                a[num - 1].style.height = "7vh";
+                a[num - 2].className = "boxlist";
+                a[num - 2].style.height = "6vh";
+                a[num + 1].className = "boxlist";
+                a[num + 1].style.height = "7vh";
+                a[num + 2].className = "boxlist";
+                a[num + 2].style.height = "6vh";
+                a[num - 1].style.width = "6.5vh";
+                a[num - 2].style.width = "6vh";
+                a[num + 1].style.width = "6.5vh";
+                a[num + 2].style.width = "6vh";
+            }
+            pointA.onmouseout = function() {
+                for (var j = 0; j < a.length; j++) {
+                    a[j].className = "list";
+                    a[j].style.height = "5.5vh";
+                    a[j].style.width = "5.5vh";
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>
