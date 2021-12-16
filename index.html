@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LXY</title>
+    <title>Document</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             user-select: none;
+            transition: all .3s ease-out;
         }
         
         html,
@@ -224,12 +225,18 @@
 
 <script>
     var GoBtn = document.getElementsByClassName("GoBtn")[0];
-    var MessageBox = document.getElementsByClassName("MessageBox")[0];
-    GoBtn.onclick = function() {
+
+
+    function MessageBoxFun(text) {
+        var MessageBox = document.getElementsByClassName("MessageBox")[0];
+        MessageBox.innerHTML = text;
         MessageBox.style.top = "20px";
         setTimeout(() => {
             MessageBox.style.top = "-50px";
         }, 500);
+    }
+    GoBtn.onclick = function() {
+
     }
 </script>
 <script src="vue.js"></script>
