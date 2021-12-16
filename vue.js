@@ -1688,7 +1688,7 @@
                 window.location.replace("risk.html");
 
             } else {
-                console.log("未登录")
+                MessageBoxFun("错误");
             }
         }
         /**
