@@ -75,21 +75,47 @@
             padding-left: 5%;
             flex-direction: column;
             border-radius: 50px;
+            display: none;
         }
         
         .titlemainBackgroundTitle {
             color: white;
             font-size: 70px;
-            /* transform: translateY(100px);
-            opacity: 0; */
+            transform: translateY(0px);
+            opacity: 1;
             transition: all .2s ease-out;
+            animation: .2s titlemainBackgroundTitleAnimation ease-out;
+        }
+        
+        @keyframes titlemainBackgroundTitleAnimation {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
         }
         
         .titlemainBackgroundContent {
             color: white;
-            font-size: 20px;
-            /* transform: translateY(100px);
-            opacity: 0; */
+            font-size: 15px;
+            transform: translateY(0px);
+            opacity: 1;
+            width: 50%;
+            animation: .4s titlemainBackgroundContentAnimation ease-out;
+        }
+        
+        @keyframes titlemainBackgroundContentAnimation {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
         }
         
         .mainContent {
@@ -169,9 +195,24 @@
             opacity: 1;
         }
         
+        .GW {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            text-align: center;
+            user-select: none;
+            text-decoration: none;
+        }
+        
         @media (max-width:767px) {
             .titlemain {
-                height: 400px;
+                height: 470px;
+            }
+            .titlemainBackgroundContent {
+                width: 100%;
+                /* height: 18%;
+                overflow: hidden; */
             }
             .titlemainBottomBox {
                 height: 140px;
@@ -202,23 +243,23 @@
             <div class="titlemain">
                 <div class="titlemainBackground" style="background-image: url(/images/CSGO.jpg);">
                     <h2 class="titlemainBackgroundTitle">CS:GO</h2>
-                    <div class="titlemainBackgroundContent">花钱买的</div>
+                    <div class="titlemainBackgroundContent">《反恐精英：全球攻势》，原名Counter-Strike: Global Offensive，是一款由VALVE与Hidden Path Entertainment合作开发、Valve Software发行的第一人称射击游戏，于2012年8月21日在欧美地区正式发售，国服发布会于2017年4月11日在北京召开。游戏为《反恐精英》系列游戏的第四款作品（不包括Neo和Online等衍生作品）</div>
                 </div>
                 <div class="titlemainBackground" style="background-image: url(/images/守望先锋.jpg);">
                     <h2 class="titlemainBackgroundTitle">守望先锋</h2>
-                    <div class="titlemainBackgroundContent">路霸YYDS</div>
+                    <div class="titlemainBackgroundContent">《守望先锋》（Overwatch，简称OW） 是由暴雪娱乐公司开发的一款第一人称射击游戏，于2016年5月24日全球上市，中国大陆地区由网易公司代理。</div>
                 </div>
                 <div class="titlemainBackground" style="background-image: url(/images/森林.jpg);">
                     <h2 class="titlemainBackgroundTitle">迷失森林</h2>
-                    <div class="titlemainBackgroundContent">找儿子</div>
+                    <div class="titlemainBackgroundContent">森林，是一款PC平台开放世界生存恐怖游戏，游戏中玩家必须建造设施，探索世界，生存下去。《森林》将打造一个活生生的，气候多变，植被动态生长凋零，地下洞穴错综复杂的森林，等待玩家探索。</div>
                 </div>
                 <div class="titlemainBackground" style="background-image: url(/images/奥德赛.jpg);">
                     <h2 class="titlemainBackgroundTitle">奥德赛</h2>
-                    <div class="titlemainBackgroundContent">杀人</div>
+                    <div class="titlemainBackgroundContent">游戏设定于距《刺客信条：起源》故事发生前四百年的公元前431年，讲述了古希腊城邦之间的伯罗奔尼撒战争的秘密虚构历史。玩家扮演一名雇佣兵，可加入以雅典为首的提洛同盟或以斯巴达为首的伯罗奔尼撒同盟。</div>
                 </div>
                 <div class="titlemainBackground" style="background-image: url(/images/曼岛TT2.jpg);">
                     <h2 class="titlemainBackgroundTitle">曼岛TT</h2>
-                    <div class="titlemainBackgroundContent">平均时速200+</div>
+                    <div class="titlemainBackgroundContent">《曼岛TT赛事：边缘竞速2中文版》是一款赛车竞速游戏,由英国 的爱尔兰小岛举行的真实赛事模拟，平均车速200+，在这里你可以尽情展现骑士梦!</div>
                 </div>
                 <div class="titlemainBottomBox">
                     <div class="titlemainBottomBoxContent">
@@ -266,6 +307,7 @@
 </body>
 <script>
     var titlemainBackground = document.getElementsByClassName("titlemainBackground");
+    titlemainBackground[titlemainBackground.length - 1].style.display = "flex";
     titlemainBackgroundIndex = 0;
     setInterval(() => {
         if (titlemainBackgroundIndex == titlemainBackground.length) {
@@ -295,22 +337,14 @@
     }
 
     function WebTitleFun() {
-        var titlemainBackgroundTitle = document.getElementsByClassName("titlemainBackgroundTitle");
-        var titlemainBackgroundContent = document.getElementsByClassName("titlemainBackgroundContent");
         for (var j = 0; j < titlemainBottomBox.length; j++) {
             titlemainBackground[j].style.opacity = "0";
             titlemainBottomBox[j].className = "titlemainBottomBoxContent";
-            titlemainBackgroundTitle[j].style.opacity = "0";
-            titlemainBackgroundTitle[j].style.transform = "translateY(100px)";
-            titlemainBackgroundContent[j].style.opacity = "0";
-            titlemainBackgroundContent[j].style.transform = "translateY(100px)";
+            titlemainBackground[j].style.display = "none";
         }
         titlemainBackground[titlemainBackgroundIndex].style.opacity = "1";
         titlemainBottomBox[titlemainBackgroundIndex].className = "titlemainBottomBoxContenthover";
-        titlemainBackgroundTitle[titlemainBackgroundIndex].style.opacity = "1";
-        titlemainBackgroundTitle[titlemainBackgroundIndex].style.transform = "translateY(0px)";
-        titlemainBackgroundContent[titlemainBackgroundIndex].style.opacity = "1";
-        titlemainBackgroundContent[titlemainBackgroundIndex].style.transform = "translateY(0px)";
+        titlemainBackground[titlemainBackgroundIndex].style.display = "flex";
     }
 </script>
 
