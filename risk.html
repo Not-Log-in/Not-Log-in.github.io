@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="images/李-账号存储.jpg" rel="shortcut icon">
+    <title>李-账号存储</title>
     <style>
         * {
             margin: 0;
@@ -68,6 +69,27 @@
             background-position: center;
             transition: all .3s ease-out;
             box-shadow: inset 0px 0px 200px black;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 5%;
+            flex-direction: column;
+            border-radius: 50px;
+        }
+        
+        .titlemainBackgroundTitle {
+            color: white;
+            font-size: 70px;
+            /* transform: translateY(100px);
+            opacity: 0; */
+            transition: all .2s ease-out;
+        }
+        
+        .titlemainBackgroundContent {
+            color: white;
+            font-size: 20px;
+            /* transform: translateY(100px);
+            opacity: 0; */
         }
         
         .mainContent {
@@ -133,7 +155,7 @@
         
         .titlemainBottomBoxContenthover>.img {
             background-position-x: 10px;
-            transform: scale(1.10);
+            transform: scale(1.12);
             box-shadow: inset 0px 0px 200px black;
         }
         
@@ -178,11 +200,26 @@
     <div class="mainFlex">
         <div class="main">
             <div class="titlemain">
-                <div class="titlemainBackground" style="background-image: url(/images/CSGO.jpg);"></div>
-                <div class="titlemainBackground" style="background-image: url(/images/守望先锋.jpg);"></div>
-                <div class="titlemainBackground" style="background-image: url(/images/森林.jpg);"></div>
-                <div class="titlemainBackground" style="background-image: url(/images/奥德赛.jpg);"></div>
-                <div class="titlemainBackground" style="background-image: url(/images/曼岛TT2.jpg);"></div>
+                <div class="titlemainBackground" style="background-image: url(/images/CSGO.jpg);">
+                    <h2 class="titlemainBackgroundTitle">CS:GO</h2>
+                    <div class="titlemainBackgroundContent">花钱买的</div>
+                </div>
+                <div class="titlemainBackground" style="background-image: url(/images/守望先锋.jpg);">
+                    <h2 class="titlemainBackgroundTitle">守望先锋</h2>
+                    <div class="titlemainBackgroundContent">路霸YYDS</div>
+                </div>
+                <div class="titlemainBackground" style="background-image: url(/images/森林.jpg);">
+                    <h2 class="titlemainBackgroundTitle">迷失森林</h2>
+                    <div class="titlemainBackgroundContent">找儿子</div>
+                </div>
+                <div class="titlemainBackground" style="background-image: url(/images/奥德赛.jpg);">
+                    <h2 class="titlemainBackgroundTitle">奥德赛</h2>
+                    <div class="titlemainBackgroundContent">杀人</div>
+                </div>
+                <div class="titlemainBackground" style="background-image: url(/images/曼岛TT2.jpg);">
+                    <h2 class="titlemainBackgroundTitle">曼岛TT</h2>
+                    <div class="titlemainBackgroundContent">平均时速200+</div>
+                </div>
                 <div class="titlemainBottomBox">
                     <div class="titlemainBottomBoxContent">
                         <div class="img" style="background-image: url(/images/CSGO.jpg);">
@@ -204,7 +241,7 @@
                     </div>
                     <div class="titlemainBottomBoxContent">
                         <div class="img" style="background-image: url(/images/奥德赛.jpg);">
-                            <div class="imgTitle">刺客信条:奥德赛</div>
+                            <div class="imgTitle">奥德赛</div>
                             <div class="imgContent">杀人</div>
                         </div>
                     </div>
@@ -219,7 +256,12 @@
         </div>
     </div>
     <div class="mainFlex">
-        <img src="/images/测试数据.jpg" style="width: 100%;" alt="">
+        <div class="main">
+            <div style="width: 100%; overflow: hidden;">
+                <img src="/images/声浪.gif" style="width: 100%; height: 20px; transform: scale(5);" alt="">
+            </div>
+            <img src="/images/测试数据.jpg" style="width: 100%;" alt="">
+        </div>
     </div>
 </body>
 <script>
@@ -253,12 +295,22 @@
     }
 
     function WebTitleFun() {
+        var titlemainBackgroundTitle = document.getElementsByClassName("titlemainBackgroundTitle");
+        var titlemainBackgroundContent = document.getElementsByClassName("titlemainBackgroundContent");
         for (var j = 0; j < titlemainBottomBox.length; j++) {
             titlemainBackground[j].style.opacity = "0";
             titlemainBottomBox[j].className = "titlemainBottomBoxContent";
+            titlemainBackgroundTitle[j].style.opacity = "0";
+            titlemainBackgroundTitle[j].style.transform = "translateY(100px)";
+            titlemainBackgroundContent[j].style.opacity = "0";
+            titlemainBackgroundContent[j].style.transform = "translateY(100px)";
         }
         titlemainBackground[titlemainBackgroundIndex].style.opacity = "1";
         titlemainBottomBox[titlemainBackgroundIndex].className = "titlemainBottomBoxContenthover";
+        titlemainBackgroundTitle[titlemainBackgroundIndex].style.opacity = "1";
+        titlemainBackgroundTitle[titlemainBackgroundIndex].style.transform = "translateY(0px)";
+        titlemainBackgroundContent[titlemainBackgroundIndex].style.opacity = "1";
+        titlemainBackgroundContent[titlemainBackgroundIndex].style.transform = "translateY(0px)";
     }
 </script>
 
