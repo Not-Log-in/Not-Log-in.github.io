@@ -6,10 +6,252 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all .3s ease-out;
+            background-size: cover;
+            background-position: center;
+        }
+        
+         ::selection {
+            background: rgb(173, 230, 206);
+            font-weight: bold;
+        }
+        /**/
+        
+         ::-webkit-scrollbar {
+            /*垂直滚动条的宽*/
+            width: 0px;
+            height: 16px;
+            background-color: black;
+        }
+        /*修改垂直滚动条的样式*/
+        
+         ::-webkit-scrollbar-thumb:vertical {
+            /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)); */
+            background-color: rgb(75, 73, 73);
+            border-radius: 2px;
+        }
+        
+        body {
+            background: black;
+        }
+        
+        .mainFlex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .main {
+            width: 2000px;
+        }
+        
+        .titlemain {
+            margin: 0 auto;
+            width: 100%;
+            height: 650px;
+            position: relative;
+            border-radius: 0px;
+            overflow: hidden;
+        }
+        
+        .titlemainBackground {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background-size: cover 0%;
+            background-position: center;
+            transition: all .3s ease-out;
+            box-shadow: inset 0px 0px 200px black;
+        }
+        
+        .mainContent {
+            width: 100%;
+            height: 300px;
+        }
+        
+        .img {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        
+        .titlemainBottomBox {
+            position: relative;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+            position: absolute;
+            justify-content: center;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .titlemainBottomBoxContent,
+        .titlemainBottomBoxContenthover {
+            user-select: none;
+            width: 200px;
+            height: 120px;
+            margin: 0px 10px 0px 10px;
+            overflow: hidden;
+            border-radius: 20px;
+            position: relative;
+            /* border: 5px solid #295B80; */
+            border: 5px solid rgba(0, 0, 0, 0);
+        }
+        
+        .titlemainBottomBoxContent>.img,
+        .titlemainBottomBoxContenthover>.img {
+            width: 100%;
+            height: 100%;
+            transform: scale(1.4);
+        }
+        
+        .imgTitle {
+            margin-left: -50px;
+            font-size: 23px;
+            color: white;
+            opacity: 0;
+        }
+        
+        .imgContent {
+            margin-left: -100px;
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            opacity: 1;
+        }
+        
+        .titlemainBottomBoxContenthover {
+            border: 5px solid #005A9E;
+        }
+        
+        .titlemainBottomBoxContenthover>.img {
+            background-position-x: 10px;
+            transform: scale(1.10);
+            box-shadow: inset 0px 0px 200px black;
+        }
+        
+        .titlemainBottomBoxContenthover>.img>.imgTitle {
+            margin-left: 15px;
+            opacity: 1;
+        }
+        
+        .titlemainBottomBoxContenthover>.img>.imgContent {
+            margin-left: 20px;
+            opacity: 1;
+        }
+        
+        @media (max-width:767px) {
+            .titlemain {
+                height: 400px;
+            }
+            .titlemainBottomBox {
+                flex-wrap: wrap;
+                height: 140px;
+                overflow: hidden;
+            }
+            .titlemainBottomBoxContent {
+                width: 45%;
+                margin: 4px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    我错了
+    <div class="mainFlex">
+        <nav></nav>
+    </div>
+    <div class="mainFlex">
+        <div class="main">
+            <div class="titlemain">
+                <div class="titlemainBackground" style="background-image: url(/images/CSGO.jpg);"></div>
+                <div class="titlemainBackground" style="background-image: url(/images/守望先锋.jpg);"></div>
+                <div class="titlemainBackground" style="background-image: url(/images/森林.jpg);"></div>
+                <div class="titlemainBackground" style="background-image: url(/images/奥德赛.jpg);"></div>
+                <div class="titlemainBackground" style="background-image: url(/images/曼岛TT2.jpg);"></div>
+                <div class="titlemainBottomBox">
+                    <div class="titlemainBottomBoxContent">
+                        <div class="img" style="background-image: url(/images/CSGO.jpg);">
+                            <div class="imgTitle">CS:GO</div>
+                            <div class="imgContent">花钱买的</div>
+                        </div>
+                    </div>
+                    <div class="titlemainBottomBoxContent">
+                        <div class="img" style="background-image: url(/images/守望先锋.jpg);">
+                            <div class="imgTitle">守望先锋</div>
+                            <div class="imgContent">路霸YYDS</div>
+                        </div>
+                    </div>
+                    <div class="titlemainBottomBoxContent">
+                        <div class="img" style="background-image: url(/images/森林.jpg);">
+                            <div class="imgTitle">迷失森林</div>
+                            <div class="imgContent">找儿子</div>
+                        </div>
+                    </div>
+                    <div class="titlemainBottomBoxContent">
+                        <div class="img" style="background-image: url(/images/奥德赛.jpg);">
+                            <div class="imgTitle">刺客信条:奥德赛</div>
+                            <div class="imgContent">杀人</div>
+                        </div>
+                    </div>
+                    <div class="titlemainBottomBoxContenthover">
+                        <div class="img" style="background-image: url(/images/曼岛TT2.jpg);">
+                            <div class="imgTitle">曼岛TT</div>
+                            <div class="imgContent">平均时速200+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainFlex">
+        <img src="/images/测试数据.jpg" style="width: 100%;" alt="">
+    </div>
 </body>
+<script>
+    var titlemainBackground = document.getElementsByClassName("titlemainBackground");
+    titlemainBackgroundIndex = 0;
+    setInterval(() => {
+        if (titlemainBackgroundIndex == titlemainBackground.length) {
+            titlemainBackgroundIndex = 0;
+            titlemainBackgroundFun();
+        } else {
+            titlemainBackgroundFun();
+        }
+    }, 2000);
+
+    function titlemainBackgroundFun() {
+        for (var j = 0; j < titlemainBackground.length; j++) {
+            titlemainBackground[j].style.opacity = "0";
+        }
+        WebTitleFun();
+        titlemainBackground[titlemainBackgroundIndex].style.opacity = "1";
+        titlemainBackgroundIndex++;
+    }
+    var titlemainBottomBox = document.querySelectorAll(".titlemainBottomBox > div");
+    for (var i = 0; i < titlemainBottomBox.length; i++) {
+        var pointA = titlemainBottomBox[i];
+        pointA.index = i;
+        pointA.onmousemove = function() {
+            titlemainBackgroundIndex = this.index;
+            WebTitleFun();
+        }
+    }
+
+    function WebTitleFun() {
+        for (var j = 0; j < titlemainBottomBox.length; j++) {
+            titlemainBackground[j].style.opacity = "0";
+            titlemainBottomBox[j].className = "titlemainBottomBoxContent";
+        }
+        titlemainBackground[titlemainBackgroundIndex].style.opacity = "1";
+        titlemainBottomBox[titlemainBackgroundIndex].className = "titlemainBottomBoxContenthover";
+    }
+</script>
 
 </html>
