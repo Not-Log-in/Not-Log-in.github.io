@@ -308,7 +308,7 @@
             </div>
         </div>
     </div>
-    <div class="mainFlex">
+    <div class="mainFlex" style="position: relative; z-index: 100;">
         <div class="main">
             <div style="width: 100%; overflow: hidden;">
                 <img src="/images/声浪.gif" style="width: 100%; height: 20px; transform: scale(5);" alt="">
@@ -357,6 +357,22 @@
         titlemainBackground[titlemainBackgroundIndex].style.opacity = "1";
         titlemainBottomBox[titlemainBackgroundIndex].className = "titlemainBottomBoxContenthover";
         titlemainBackground[titlemainBackgroundIndex].style.display = "flex";
+
+    }
+    //onresize
+    window.onscroll = function() {
+        console.log(document.scrollingElement.scrollTop)
+        document.getElementsByClassName("titlemain")[0].style.transition = "none";
+        document.getElementsByClassName("titlemain")[0].style.top = document.scrollingElement.scrollTop + "px";
+        for (var j = 0; j < titlemainBottomBox.length; j++) {
+            titlemainBackground[j].style.boxShadow = "inset 0px " + document.scrollingElement.scrollTop + "px 400px rgba(0,0,0,0.9)";
+        }
+        if (document.scrollingElement.scrollTop > 30) {
+            document.getElementsByClassName("titlemainBottomBox")[0].style.bottom = "-200px";
+        } else {
+            document.getElementsByClassName("titlemainBottomBox")[0].style.bottom = "0px";
+        }
+
     }
 </script>
 
