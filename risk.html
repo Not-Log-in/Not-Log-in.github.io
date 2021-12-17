@@ -76,6 +76,18 @@
             flex-direction: column;
             border-radius: 50px;
             display: none;
+            animation: .4s titlemainBackgroundAnimation ease-out;
+        }
+        
+        @keyframes titlemainBackgroundAnimation {
+            from {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
         
         .titlemainBackgroundTitle {
