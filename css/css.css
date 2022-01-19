@@ -1,0 +1,568 @@
+    * {
+        margin: 0;
+        padding: 0;
+        transition: all .2s ease-out;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    /**/
+    
+     ::-webkit-scrollbar {
+        /*垂直滚动条的宽*/
+        width: 1vh;
+        /* height: 16px; */
+        background-color: white;
+    }
+    /*修改垂直滚动条的样式*/
+    
+     ::-webkit-scrollbar-thumb:vertical {
+        /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)); */
+        background-color: skyblue;
+        border-radius: 2px;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: #F6F8FA;
+    }
+    
+    .bacSize {
+        background-size: center;
+        background-position: center;
+    }
+    
+    .Flex {
+        display: flex;
+    }
+    
+    .FlexRow {
+        flex-direction: row;
+    }
+    
+    .FlexColumn {
+        flex-direction: column;
+    }
+    
+    .FlexJustCenter {
+        justify-content: center;
+    }
+    
+    .FlexJustStart {
+        justify-content: flex-start;
+    }
+    
+    .FlexJustAround {
+        justify-content: space-around;
+    }
+    
+    .FlexWrap {
+        flex-wrap: wrap;
+    }
+    
+    .FlexJustEnd {
+        justify-content: flex-end;
+    }
+    
+    .FlexAlignStart {
+        align-items: flex-start;
+    }
+    
+    .FlexAlignEnd {
+        align-items: flex-end;
+    }
+    
+    .FlexAlignCenter {
+        align-items: center;
+    }
+    /*头部*/
+    
+    .xxTitle {
+        width: 2000px;
+        height: 60px;
+        background-color: #25292F;
+        padding-left: 30px;
+        font-weight: bold;
+        position: relative;
+        transition: all .2s ease-out;
+    }
+    
+    .xxContent:first-child {
+        display: inline-block;
+    }
+    
+    .xxContent {
+        width: 100%;
+        display: none;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
+        transform: translateY(3px);
+        margin-right: 30px;
+        animation: logoAnimation .4s ease-out;
+    }
+    
+    @keyframes logoAnimation {
+        0% {
+            transform: scale(1) translateY(3px);
+        }
+        20% {
+            transform: scale(0.2) translateY(3px);
+        }
+        50% {
+            transform: scale(1.2) translateY(3px);
+        }
+        70% {
+            transform: scale(0.95) translateY(3px);
+        }
+        100% {
+            transform: scale(1) translateY(3px);
+        }
+    }
+    
+    .kepuVideo {
+        margin: 4px 0px 10px 0px;
+        animation: videoAnimation .5s ease-out;
+    }
+    
+    @keyframes videoAnimation {
+        0% {
+            transform: scale(1) translateY(-100px);
+        }
+        20% {
+            transform: scale(0.5) translateY(0px);
+        }
+        50% {
+            transform: scale(1.1) translateY(0px);
+        }
+        70% {
+            transform: scale(0.95) translateY(0px);
+        }
+        100% {
+            transform: scale(1) translateY(0px);
+            ;
+        }
+    }
+    
+    .xxTitle>div {
+        margin-left: 20px;
+        user-select: none;
+        animation: xxTitleDivAnimation .4s ease-out;
+        padding: 0px 2px 0px 2px;
+        /* height: 100%;
+    line-height: 60px; */
+    }
+    
+    @keyframes xxTitleDivAnimation {
+        from {
+            transform: translateY(-20px) scale(0);
+        }
+        to {
+            transform: translateY(0px) scale(1);
+        }
+    }
+    
+    .xxTitleBtn {
+        color: #ccc;
+    }
+    
+    .xxTitleBtnHover {
+        color: white;
+        /* background-color: red; */
+        /* line-height: 50px; */
+    }
+    /*主要展示部分*/
+    
+    .standard {
+        width: 2000px;
+    }
+    
+    .standardLeft {
+        width: 20%;
+        background-color: #F6F8FA;
+        /* border-right: 2px solid #D9DEE4; */
+        height: 1000px;
+    }
+    
+    .standardRight {
+        width: 80%;
+        background-color: white;
+        position: relative;
+        background: #F6F8FA;
+    }
+    
+    .technologyBtnBox {
+        margin-top: 15px;
+    }
+    
+    .standardLeftFixed {
+        box-sizing: border-box;
+        padding-left: 7px;
+        border-right: 2px solid #D9DEE4;
+        height: 1000px;
+        width: 100%;
+        position: relative;
+        transition: none;
+        /* width: 20%;
+    position: fixed; */
+        /* background: red; */
+    }
+    
+    .standardLeftFixed>video {
+        /* position: absolute; */
+        width: 98%;
+        border-radius: 20px;
+        transition: all .2s ease-out;
+        position: relative;
+    }
+    
+    .standardLeftFixedTitle {
+        box-sizing: border-box;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        font-weight: bold;
+        padding-left: 10px;
+        font-size: 18px;
+        animation: standardLeftFixedTitleAnimation .4s ease-out;
+        transform-origin: 0% 0%;
+    }
+    
+    .standardRightTitleFlex {
+        flex-direction: row;
+        margin-top: -130px;
+    }
+    
+    .standardRightTitleFlex>div {
+        width: 20%;
+        height: 200px;
+        background-color: white;
+        margin: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        user-select: none;
+        /* animation: standardRightTitleFlexDivAnimation .4s ease-out; */
+    }
+    
+    .JGBox {
+        width: 250px;
+        height: 280px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin: 20px;
+        overflow: hidden;
+        text-align: center;
+        animation: JGBoxAnimation .4s ease-out;
+    }
+    
+    @keyframes JGBoxAnimation {
+        /* 0% {
+            transform: scale(1) translateY(-20px);
+        }
+        20% {
+            transform: scale(0.9) translateY(-20px);
+        }
+        50% {
+            transform: scale(1) translateY(-20px);
+        }
+        70% {
+            transform: scale(0.95) translateY(0px);
+        }
+        100% {
+            transform: scale(1) translateY(0px);
+        } */
+        from {
+            transform: translateY(-50px);
+        }
+        to {
+            transform: translateY(0px);
+        }
+    }
+    
+    .JGBox:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    .JGBox p {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+        color: rgb(83, 83, 83);
+    }
+    
+    .JGBox h1 {
+        color: #427AB8;
+    }
+    
+    .JGBox>img {
+        width: 100%;
+    }
+    
+    @keyframes standardRightTitleFlexDivAnimation {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    
+    .standardRightTitleFlex>div:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    }
+    /* .standardRightTitleFlex>div:active {
+    transform: scale(1.5);
+    opacity: 0;
+} */
+    
+    .standardRightTitleFlexTop {
+        flex: 2;
+        width: 100%;
+    }
+    
+    .standardRightTitleFlexBtttom {
+        flex: 1;
+        width: 100%;
+        background-color: #F4F6FA;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #3474D7;
+    }
+    
+    .qianduan {
+        width: 50%;
+        height: 50%;
+        transform: translate(-5%, 0px) scale(1.3);
+    }
+    
+    @keyframes standardLeftFixedTitleAnimation {
+        from {
+            transform: translateY(-20px) scale(0.2);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0px) scale(1);
+            opacity: 1;
+        }
+    }
+    
+    .standardLeftFixedContent {
+        width: 100%;
+        height: 22px;
+        line-height: 22px;
+        font-weight: bold;
+        font-size: 15px;
+        /* padding-left: 20px; */
+        text-align: center;
+        animation: standardLeftFixedContentAnimation .4s ease-out;
+    }
+    
+    .standardLeftFixedContent2 {
+        width: 98%;
+        height: 300px;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        border-radius: 20px;
+    }
+    
+    .standardLeftFixedContent2>a>div {
+        margin-top: 10px;
+        color: black;
+    }
+    /* .standardLeftFixedContent2 div:hover {
+        text-decoration: black;
+    } */
+    
+    .Boxtitle {
+        font-size: 30px;
+        font-weight: bold;
+        padding-left: 5%;
+        color: #4374D8;
+    }
+    
+    .WebMainPhoto {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-size: 100% 100%;
+        background-image: url(/images/bilibiliPhoto.png);
+    }
+    
+    .WebMainName {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    
+    .standardRightTitle {
+        width: 100%;
+        height: 280px;
+        /* background-color: red; */
+        background: linear-gradient(to bottom right, #2E2590, #1671d3, #419AFB);
+        color: white;
+        font-weight: bold;
+        font-size: 60px;
+        padding-top: 70px;
+        box-sizing: border-box;
+        animation: standardRightTitleAnimation .4s ease-out;
+    }
+    
+    @keyframes standardRightTitleAnimation {
+        from {
+            padding-top: 50px;
+        }
+        to {
+            padding-top: 70px;
+        }
+    }
+    
+    @keyframes standardLeftFixedContentAnimation {
+        from {
+            transform: translateY(30px) scale(0.2);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0px) scale(1);
+            opacity: 1;
+        }
+    }
+    
+    .standardLeftFixedTitle>svg {
+        width: 20px;
+        height: 20px;
+        transform: translateY(4px);
+    }
+    
+    @media(max-width:1800px) {
+        .standardRightTitleFlex>div {
+            width: 25%;
+        }
+    }
+    
+    @media (max-width:1450px) {
+        .JGBox {
+            width: 22%;
+            margin: 10px;
+        }
+    }
+    
+    @media (max-width:1280px) {
+        .standardLeft {
+            width: 24%;
+        }
+    }
+    
+    @media (max-width:1170px) {
+        .standardLeft {
+            width: 25%;
+        }
+        .standardLeftFixed {
+            width: 100%;
+        }
+        .standardRight {
+            width: 75%;
+        }
+        .standardRightTitleFlex>div {
+            width: 30%;
+        }
+        .JGBox {
+            width: 30%;
+            margin: 5px;
+        }
+    }
+    
+    @media (max-width:980px) {
+        .standardLeft {
+            width: 30%;
+        }
+        .standardRight {
+            width: 70%;
+        }
+    }
+    
+    @media (max-width:900px) {
+        .standardLeft {
+            width: 28%;
+            display: none;
+        }
+        .standardLeftFixed {
+            width: 100%;
+            display: none;
+        }
+        .standardRight {
+            width: 100%;
+            /* display: none; */
+        }
+        .Angular>div:first-child {
+            width: 150px;
+            height: 150px;
+        }
+        .standardRightTitle {
+            font-size: 40px;
+            height: 200px;
+        }
+        .standardRightTitleFlex {
+            margin-top: -70px;
+        }
+        .standardRightTitleFlex>div {
+            margin: 10px;
+            width: 30%;
+        }
+        .JGBox {
+            width: 30%;
+            margin: 5px;
+        }
+    }
+    
+    @media (max-width:650px) {
+        .xxTitle {
+            padding-left: 0px;
+            height: 40px;
+            flex-wrap: wrap;
+            padding-bottom: 10px;
+            overflow: hidden;
+        }
+        .logo {
+            margin-right: 0px;
+        }
+        .xxTitle>div {
+            margin-left: 20px;
+            flex-wrap: wrap;
+        }
+        .PhoneBtn {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            bottom: 0px;
+            right: 0px;
+        }
+        .standardRightTitleFlex>div:last-child {
+            display: none;
+        }
+        .standardRightTitleFlex>div {
+            margin: 10px;
+            height: 160px;
+            width: 40%;
+        }
+        .JGBox {
+            width: 45%;
+            margin: 5px;
+        }
+    }
+    
+    @media (min-width:650px) {
+        .PhoneBtn {
+            display: none;
+        }
+    }
