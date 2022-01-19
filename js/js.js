@@ -1,11 +1,15 @@
-var xxTitleDiv = document.querySelectorAll(".xxTitle > div");
-let xxTitleDivAnimationIndex = 0.3;
 var xxTitle = document.getElementsByClassName("xxTitle")[0];
-for (var i = 0; i < xxTitleDiv.length; i++) {
-    console.log(xxTitleDiv[i].textContent);
-    xxTitleDivAnimationIndex += 0.1;
-    xxTitleDiv[i].style.animation = "xxTitleDivAnimation " + xxTitleDivAnimationIndex + "s ease-out";
-};
+
+function AnimationD(Element, time, GoTime, animationName) { //动画延迟function
+    //参数一 元素, 参数二时间,参数三 跨距,参数四 动画名称
+    var Element = Element;
+    var time = time;
+    for (var i = 0; i < Element.length; i++) {
+        time += GoTime;
+        Element[i].style.animation = animationName + " " + time + "s ease-out";
+    }
+}
+AnimationD(document.querySelectorAll(".xxTitle > div"), 0.3, 0.1, "xxTitleDivAnimation");
 
 function myvideoByeFun() {
     for (var j = 0; j < myVideo.length; j++) {
@@ -23,7 +27,6 @@ window.onresize = function() {
         xxTitle.style.height = "40px";
         myvideoByeFun();
     }
-
 }
 var standardLeftFixed = document.getElementsByClassName("standardLeftFixed")[0];
 var standardLeft = document.getElementsByClassName("standardLeft")[0];
@@ -42,9 +45,8 @@ function bodyleftbox() {
     }
 }
 bodyleftbox();
+
 var myVideo = document.getElementsByClassName("kepuVideo");
-
-
 window.onscroll = function() {
     bodyleftbox();
     myvideoByeFun();
@@ -61,7 +63,6 @@ for (var i = 0; i < myVideo.length; i++) {
             myVideo[this.index].style.margin = "40px 0px 0px 200px";
             myVideo[this.index].style.boxShadow = "0px 0px 20px rgba(0,0,0,0.2)";
             myVideo[this.index].style.zIndex = "9999";
-
         } else {
             myVideo[this.index].pause();
             myVideo[this.index].style.transform = "scale(1)";
@@ -71,12 +72,8 @@ for (var i = 0; i < myVideo.length; i++) {
         }
     }
 }
-var standardRightTitleFlexDiv = $(".standardRightTitleFlex>div");
-let standardRightTitleFlexDivIndex = 0.2;
-for (var i = 0; i < standardRightTitleFlexDiv.length; i++) {
-    standardRightTitleFlexDivIndex += 0.2;
-    standardRightTitleFlexDiv[i].style.animation = "standardRightTitleFlexDivAnimation " + standardRightTitleFlexDivIndex + "s ease-out";
-}
+
+AnimationD($(".standardRightTitleFlex>div"), 0.2, 0.2, "standardRightTitleFlexDivAnimation");
 
 function ClickContentBox(number) {
     var xxTitleDiv = $(".xxTitle> div");
@@ -89,9 +86,11 @@ function ClickContentBox(number) {
     xxTitleDiv[number].style.transition = "all .2s ease-out";
     xxContent[number].style.display = "inline-block";
 }
-var JGBox = document.getElementsByClassName("JGBox");
-let JGBoxIndex = 0.2;
-for (var i = 0; i < JGBox.length; i++) {
-    JGBoxIndex += 0.1;
-    JGBox[i].style.animation = "JGBoxAnimation " + JGBoxIndex + "s ease-out";
+AnimationD(document.getElementsByClassName("JGBox"), 0.2, 0.1, "JGBoxAnimation");
+AnimationD(document.querySelectorAll(".standardLeftFixedContent2 div"), 0.1, 0.05, "standardLeftFixedContent2DivAnimation");
+
+function CopyFun() {
+    navigator.clipboard.writeText('Yoawdw');
+    document.execCommand('Copy');
+    console.log("123");
 }
