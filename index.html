@@ -58,7 +58,7 @@
                                 <div class="WebMainName">CSDN-confused a</div>
                             </div>
                         </a>
-                        <div style="width: 100%; text-align: center; padding-top: 10px; user-select: none;" onclick="ClickContentBox(5)">查看详情</div>
+                        <div style="width: 100%; text-align: center; padding-top: 10px; user-select: none; color: #3474D7;" onclick="ClickContentBox(5)">查看详情</div>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                                 </a>
                             </div>
                             <div class="JGBox Flex FlexColumn">
-                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/webpack.png" alt="">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/webpack.png" alt="images/前端史bac.png">
 
                                 <a href="https://www.webpackjs.com/">
                                     <h1>Webpack</h1>
@@ -198,10 +198,28 @@
                         <!--首页-->
                     </div>
                     <div class="xxContent">
-                        <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">前端效果</div>
-                        <div class="Flex FlexJustCenter FlexAlignCenter FlexRow" style="margin-top: -100px;">
-                            <div style="width:40%;height:120px; background:#F6F8FA; border-radius: 20px; margin: 10px;"></div>
-                            <div style="width:40%;height:120px; background:#F6F8FA; border-radius: 20px; margin: 10px;"></div>
+                        <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart bacSize">前端效果</div>
+                        <div class="standardRightTitleContent">配色搭配</div>
+                        <div class="Flex  FlexJustCenter FlexAlignStart FlexWrap">
+                            <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover">
+                                <div class="ColorMatch" style="background:#2B4653;" @mouseover="ColorMatchHover(1,0,'#2B4653')" @click="ColorMatchClick(1,0,'#2B4653')"></div>
+                                <div class="ColorMatch" style="background:#439D8F;" @mouseover="ColorMatchHover(1,1,'#439D8F')" @click="ColorMatchClick(1,1,'#439D8F')"></div>
+                                <div class="ColorMatch" style="background:#E5C467;" @mouseover="ColorMatchHover(1,2,'#E5C467')" @click="ColorMatchClick(1,2,'#E5C467')"></div>
+                                <div class="ColorMatch" style="background:#EDA260;" @mouseover="ColorMatchHover(1,3,'#EDA260')" @click="ColorMatchClick(1,3,'#EDA260')"></div>
+                                <div class="ColorMatch" style="background:#DE7051;" @mouseover="ColorMatchHover(1,4,'#DE7051')" @click="ColorMatchClick(1,4,'#DE7051')"></div>
+                            </div>
+                            <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover">
+                                <div class="ColorMatch" style="background:#cb997e;" @mouseover="ColorMatchHover(2,0,'#cb997e')" @click="ColorMatchClick(2,0,'#cb997e')"></div>
+                                <div class="ColorMatch" style="background:#ddbea9;" @mouseover="ColorMatchHover(2,1,'#ddbea9')" @click="ColorMatchClick(2,1,'#ddbea9')"></div>
+                                <div class="ColorMatch" style="background:#ffe8d6;" @mouseover="ColorMatchHover(2,2,'#E5C467')" @click="ColorMatchClick(2,2,'#ffe8d6')"></div>
+                                <div class="ColorMatch" style="background:#b7b7a4;" @mouseover="ColorMatchHover(2,3,'#b7b7a4')" @click="ColorMatchClick(2,3,'#b7b7a4')"></div>
+                                <div class="ColorMatch" style="background:#a5a58d;" @mouseover="ColorMatchHover(2,4,'#DE7051')" @click="ColorMatchClick(2,4,'#a5a58d')"></div>
+                                <div class="ColorMatch" style="background:#6b705c;" @mouseover="ColorMatchHover(2,5,'#6b705c')" @click="ColorMatchClick(2,5,'#6b705c')"></div>
+                            </div>
+                            <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover">
+                                <div class="ColorMatch" style="background:#87b38d;" @mouseover="ColorMatchHover(3,0,'#87b38d')" @click="ColorMatchClick(3,0,'#87b38d')"></div>
+                                <div class="ColorMatch" style="background:#87b38d;" @mouseover="ColorMatchHover(3,1,'#87b38d')" @click="ColorMatchClick(3,1,'#87b38d')"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="xxContent">
@@ -279,6 +297,30 @@
                     xxTitleDiv[number].style.transition = "all .2s ease-out";
                     xxContent[number].style.display = "inline-block";
                 },
+                ColorMatchHover(fatherNumber, number, color) {
+                    var ColorMatchBoxDiv = $(".ColorMatchBox:nth-child(" + fatherNumber + ") > .ColorMatch");
+                    for (var i = 0; i < ColorMatchBoxDiv.length; i++) {
+                        ColorMatchBoxDiv[i].style.flex = "1";
+                        ColorMatchBoxDiv[i].innerHTML = "";
+                    }
+                    console.log(ColorMatchBoxDiv[number].style.background);
+                    ColorMatchBoxDiv[number].style.flex = "2.5";
+                    ColorMatchBoxDiv[number].innerHTML = "Copy";
+                },
+                ColorMatchNoHover(fatherNumber) {
+                    var ColorMatchBoxDiv = $(".ColorMatch");
+                    for (var i = 0; i < ColorMatchBoxDiv.length; i++) {
+                        ColorMatchBoxDiv[i].style.flex = "1";
+                        ColorMatchBoxDiv[i].innerHTML = "";
+                    }
+                },
+                ColorMatchClick(fatherNumber, number, color) {
+                    var ColorMatchBoxDiv = $(".ColorMatchBox:nth-child(" + fatherNumber + ") > .ColorMatch");
+                    // console.log(ColorMatchBoxDiv[number].style.background);
+                    navigator.clipboard.writeText(color);
+                    document.execCommand('Copy');
+                    return fatherNumber + number + color;
+                }
             }
 
         }).mount("#Bodyapp")
