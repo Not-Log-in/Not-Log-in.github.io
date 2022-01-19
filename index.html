@@ -5,243 +5,286 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="images/李-账号存储.jpg" rel="shortcut icon">
-    <meta name="keywords" content="lxy,游戏,game,曼岛TT,CSGO,520lxy ">
-    <meta name="description" content="个人数据存储">
-    <title>Li</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            user-select: none;
-            transition: all .3s ease-out;
-        }
-        
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            animation: htmlAnimation .6s ease-out;
-            background-color: black;
-        }
-        
-        @keyframes htmlAnimation {
-            from {
-                transform: scale(1.5);
-            }
-            to {
-                transform: scale(1);
-            }
-        }
-        
-        .web {
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .UserBox {
-            background: rgba(255, 255, 255, 0.90);
-            border-radius: 30px;
-            width: 400px;
-            transition: all .2s ease-out;
-            transform: scale(0) rotate(30deg);
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            padding-bottom: 30px;
-            box-sizing: border-box;
-            animation: UserBoxAnimation 4s infinite;
-        }
-        
-        .UserBox input {
-            outline: none;
-            border-radius: 10px;
-            border: 0;
-            width: 80%;
-            height: 25px;
-            margin: 0 auto;
-            outline: none;
-            padding: 5px;
-            padding-left: 10px;
-            box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.9);
-        }
-        
-        .UserBox>h2 {
-            font-size: 35px;
-        }
-        
-        .line {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-        }
-        
-        .btn {
-            width: 200px;
-            height: 100px;
-            opacity: 0;
-            position: absolute;
-            right: 0%;
-            bottom: 0%;
-        }
-        
-        .GoBtn {
-            width: 45%;
-            height: 40px;
-            line-height: 40px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 10px;
-            background: deepskyblue;
-            transition: all .1s ease-out;
-            margin: 0 auto;
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .GoBtn:hover {
-            background: rgb(9, 147, 194);
-        }
-        
-        video {
-            animation: videoAnimation 10s infinite;
-            height: 120%;
-            position: absolute;
-            transition: all .4s ease-out;
-        }
-        
-        @keyframes videoAnimation {
-            0% {
-                transform: translateX(0px);
-            }
-            25% {
-                transform: translateX(30px);
-            }
-            50% {
-                transform: translateX(0px);
-            }
-            75% {
-                transform: translateX(30px);
-            }
-            100% {
-                transform: translateX(0px);
-            }
-        }
-        
-        .titleBox {
-            position: relative;
-            top: 0px;
-            width: 100%;
-            height: 50px;
-            font-size: 20px;
-            z-index: 9999;
-        }
-        
-        .title {
-            height: 100%;
-            position: absolute;
-            width: 250px;
-            left: 0px;
-            color: white;
-            animation: titleAnimation 15s infinite;
-        }
-        
-        @keyframes titleAnimation {
-            0% {
-                left: -20%;
-            }
-            50% {
-                left: 110%;
-            }
-            100% {
-                left: -20%;
-            }
-        }
-        
-        .MessageBox {
-            margin: 0 auto;
-            width: 10%;
-            left: 45%;
-            line-height: 30px;
-            height: 30px;
-            font-size: 20px;
-            top: -50px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 20px;
-            text-align: center;
-            font-size: 16px;
-            position: fixed;
-            z-index: 999999;
-            transition: all .2s ease-out;
-        }
-        
-        @media (max-width: 575px) {
-            .web {
-                background-image: url(/images/background.jpg);
-            }
-            video {
-                display: none;
-            }
-            .UserBox {
-                width: 90%;
-            }
-            .titleBox {
-                display: none;
-            }
-            .MessageBox {
-                width: 20%;
-                left: 40%;
-            }
-        }
-    </style>
+    <title>学习-永无止境</title>
+    <link href="/images/LoGo.gif" rel="shortcut icon ">
+    <link rel="stylesheet" href="css/css.css">
 </head>
 
 <body>
-    <div class="MessageBox ">错误</div>
-    <div class="titleBox ">
-        <div class="title ">本网站内藏玄机!欢迎破解</div>
+    <div id="app" class="Flex FlexJustCenter FlexAlignCenter">
+        <nav class="xxTitle Flex FlexRow FlexJustStart FlexAlignCenter">
+            <img class="logo" src="/images/LoGo.gif" alt="">
+            <div class="xxTitleBtnHover" @click="xxTitleBtnClick($event,0)">首页</div>
+            <div class="xxTitleBtn" @click="xxTitleBtnClick($event,1)">前端效果</div>
+            <div class="xxTitleBtn" @click="xxTitleBtnClick($event,2)">学习笔记</div>
+            <div class="xxTitleBtn" @click="xxTitleBtnClick($event,3)">答疑解析</div>
+            <div class="xxTitleBtn" @click="xxTitleBtnClick($event,4)">市场</div>
+            <div class="xxTitleBtn" @click="xxTitleBtnClick($event,5)">开发者</div>
+            <span class="PhoneBtn" @click="PhoneBtnFun">
+                <svg style="width: 100%; height:100%;" t="1642490959937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2124" width="200" height="200"><path d="M787.2 380.8c-9.6-9.6-22.4-12.8-35.2-12.8l-480 3.2c-12.8 0-25.6 3.2-35.2 12.8-19.2 19.2-19.2 48 0 67.2l240 240c0 0 0 0 0 0 0 0 0 0 0 0 3.2 3.2 9.6 6.4 12.8 9.6 0 0 3.2 3.2 3.2 3.2 16 6.4 38.4 3.2 51.2-9.6l240-243.2C806.4 428.8 803.2 400 787.2 380.8z" p-id="2125" fill="#e6e6e6"></path></svg>
+            </span>
+        </nav>
     </div>
-    <div class="web ">
-        <video src="/images/background1.mp4 " muted="muted " autoplay="autoplay " loop="loop "></video>
-        <div style="width: 100%; height: 100%; position: absolute; "></div>
-        <div class="btn "></div>
-        <div class="UserBox ">
-            <h2>登录</h2>
-            <div class="line ">
-                <input class="Account " type="text " placeholder="账号 ">
+    <div class="Flex FlexRow FlexJustCenter FlexAlignCenter">
+        <div class="standard Flex">
+            <div class="standardLeft Flex">
+                <div class="standardLeftFixed  FlexColumn">
+                    <nav class="standardLeftFixedTitle">
+                        <svg t="1642502146965" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4561" width="200" height="200"><path d="M221.866667 405.333333c-14.933333 36.266667-23.466667 76.8-23.466667 117.333334 0 34.133333 6.4 68.266667 17.066667 98.133333 19.2-32 44.8-68.266667 76.8-106.666667-4.266667-8.533333-8.533333-19.2-8.533334-29.866666 0-8.533333 2.133333-14.933333 4.266667-21.333334-29.866667-21.333333-51.2-40.533333-66.133333-57.6zM332.8 778.666667c10.666667-8.533333 19.2-17.066667 29.866667-23.466667 87.466667-66.133333 166.4-104.533333 228.266666-125.866667 0-4.266667-2.133333-8.533333-2.133333-12.8v-6.4c-21.333333-6.4-44.8-12.8-66.133333-21.333333-55.466667-19.2-102.4-42.666667-142.933334-64-10.666667 10.666667-25.6 17.066667-40.533333 17.066667-8.533333 0-14.933333-2.133333-21.333333-4.266667-40.533333 46.933333-68.266667 91.733333-87.466667 125.866667 25.6 46.933333 59.733333 85.333333 102.4 115.2zM535.466667 556.8c23.466667 8.533333 46.933333 14.933333 70.4 21.333333 6.4-6.4 12.8-10.666667 19.2-12.8-6.4-23.466667-14.933333-46.933333-25.6-70.4-14.933333-34.133333-32-66.133333-49.066667-93.866666-6.4 2.133333-10.666667 2.133333-17.066667 2.133333-12.8 0-25.6-4.266667-36.266666-12.8-23.466667 14.933333-46.933333 29.866667-72.533334 49.066667l-32 25.6c2.133333 6.4 4.266667 14.933333 4.266667 21.333333v8.533333c38.4 19.2 85.333333 42.666667 138.666667 61.866667zM834.133333 522.666667c0-89.6-38.4-172.8-102.4-228.266667-32 6.4-81.066667 19.2-140.8 44.8v6.4c0 12.8-4.266667 23.466667-10.666666 34.133333 19.2 29.866667 36.266667 64 53.333333 102.4 10.666667 27.733333 21.333333 55.466667 29.866667 81.066667 17.066667 4.266667 32 17.066667 40.533333 34.133333 12.8 2.133333 25.6 2.133333 38.4 2.133334 32 2.133333 61.866667 0 85.333333 0 2.133333-27.733333 6.4-51.2 6.4-76.8zM516.266667 290.133333c6.4-2.133333 10.666667-2.133333 17.066666-2.133333 17.066667 0 32 6.4 42.666667 19.2 46.933333-21.333333 87.466667-34.133333 119.466667-42.666667-51.2-34.133333-113.066667-55.466667-179.2-55.466666-23.466667 0-49.066667 2.133333-70.4 8.533333 19.2 19.2 44.8 42.666667 70.4 72.533333zM661.333333 800c2.133333-32 0-74.666667-10.666666-128h-4.266667c-14.933333 0-27.733333-4.266667-36.266667-12.8-59.733333 21.333333-138.666667 57.6-224 123.733333-6.4 4.266667-12.8 10.666667-21.333333 14.933334 44.8 23.466667 96 36.266667 149.333333 36.266666 53.333333 2.133333 104.533333-10.666667 147.2-34.133333zM238.933333 371.2c14.933333 17.066667 38.4 40.533333 72.533334 66.133333 8.533333-4.266667 19.2-8.533333 29.866666-8.533333 10.666667 0 21.333333 2.133333 29.866667 8.533333l32-25.6c25.6-19.2 51.2-36.266667 74.666667-51.2-2.133333-4.266667-2.133333-8.533333-2.133334-14.933333 0-12.8 4.266667-23.466667 10.666667-34.133333-32-36.266667-59.733333-64-83.2-81.066667-70.4 25.6-128 76.8-164.266667 140.8zM733.866667 633.6c-6.4 0-17.066667 0-32 4.266667-4.266667 8.533333-8.533333 14.933333-14.933334 21.333333 8.533333 46.933333 12.8 87.466667 12.8 119.466667 51.2-36.266667 91.733333-85.333333 115.2-145.066667h-81.066666z" fill="#00C1DE" p-id="4562"></path><path d="M661.333333 87.466667C652.8 61.866667 629.333333 42.666667 599.466667 42.666667c-34.133333 0-64 27.733333-64 61.866666s27.733333 61.866667 64 61.866667c17.066667 0 34.133333-6.4 44.8-19.2C804.266667 202.666667 917.333333 349.866667 917.333333 522.666667c0 42.666667-6.4 83.2-19.2 121.6l55.466667 32c17.066667-46.933333 27.733333-100.266667 27.733333-153.6C981.333333 320 846.933333 147.2 661.333333 87.466667zM842.666667 740.266667c-34.133333 0-64 27.733333-64 61.866666 0 6.4 2.133333 10.666667 2.133333 17.066667-70.4 61.866667-164.266667 100.266667-266.666667 100.266667-117.333333 0-224-51.2-298.666666-130.133334l-57.6 32c85.333333 98.133333 213.333333 160 354.133333 160 119.466667 0 230.4-44.8 311.466667-119.466666 4.266667 2.133333 8.533333 2.133333 14.933333 2.133333 34.133333 0 64-27.733333 64-61.866667s-25.6-61.866667-59.733333-61.866666zM121.6 599.466667c-4.266667-25.6-8.533333-49.066667-8.533333-76.8 0-189.866667 136.533333-347.733333 317.866666-386.133334v-64C213.333333 110.933333 49.066667 298.666667 49.066667 522.666667c0 32 4.266667 64 10.666666 93.866666-10.666667 10.666667-17.066667 25.6-17.066666 42.666667 0 34.133333 27.733333 61.866667 64 61.866667 34.133333 0 64-27.733333 64-61.866667 0-29.866667-21.333333-53.333333-49.066667-59.733333z" fill="#00C1DE" p-id="4563"></path></svg>
+                        <span>科普专栏</span>
+                    </nav>
+                    <!-- <span class="standardLeftFixedContent">什么是互联网?</span> -->
+                    <!-- <video class="kepuVideo" poster="/images/互联网bac.png" class="QianDuanFaZhan" src="/images/互联网.mp4" autoplay="autoplay" loop="loop"></video> -->
+                    <span class="standardLeftFixedContent">前端那点事儿</span>
+                    <video class=" kepuVideo " poster="/images/前端史bac.png " class="QianDuanFaZhan " src="/images/前端史.mp4 " autoplay="autoplay " loop="loop "></video>
+                    <!-- <img src="/images/测试.png" style="width: 100%;" alt=""> -->
+                    <div class="standardLeftFixedContent2">
+                        <small style="font-weight: bold;">站长账号</small>
+                        <a href="https://space.bilibili.com/1333864514" target="block">
+                            <div class="Flex FlexRow FlexAlignCenter FlexJustStart">
+                                <div class="WebMainPhoto"></div>
+                                <div class="WebMainName">bilibili-JPGCbplus</div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Not-Log-in" target="block">
+                            <div class="Flex FlexRow FlexAlignCenter FlexJustStart">
+                                <div class="WebMainPhoto" style="background-image: url(/images/GitHubPhoto.png);"></div>
+                                <div class="WebMainName">github-NotLogIn</div>
+                            </div>
+                        </a>
+                        <a href="https://blog.csdn.net/MicrosoftP8?spm=1000.2115.3001.5343" target="block">
+                            <div class="Flex FlexRow FlexAlignCenter FlexJustStart">
+                                <div class="WebMainPhoto" style="background-image: url(/images/CSDNPhoto.png);"></div>
+                                <div class="WebMainName">CSDN-confused a</div>
+                            </div>
+                        </a>
+                        <div style="width: 100%; text-align: center; padding-top: 10px; user-select: none;" onclick="ClickContentBox(5)">查看详情</div>
+                    </div>
+                </div>
             </div>
-            <div class="line ">
-                <input class="Password " type="password " placeholder="密码 ">
+            <div class="standardRight">
+                <div id="Bodyapp">
+                    <div class="xxContent">
+                        <!--首页-->
+                        <!--头部-->
+                        <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">
+                            学习永远是值得的
+                        </div>
+                        <div class="Flex standardRightTitleFlex FlexAlignCenter FlexJustCenter">
+                            <!--前端效果-->
+                            <div class="Flex FlexColumn standardRightTitleFlexContent" @click="xxTitleBtnClick($event,1)">
+                                <div class="Flex FlexJustCenter FlexAlignCenter standardRightTitleFlexTop">
+                                    <svg class="qianduan" t="1642562180716" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1766" width="200" height="200"><path d="M128 0l888.832 0-72.704 843.776-376.832 115.712-358.4-115.712zM839.68 254.976l21.504-128-572.416-1.024 36.864 384 372.736 0 0 100.352-124.928 44.032-130.048-46.08-8.192-54.272-102.4 1.024 15.36 135.168 219.136 76.8 230.4-72.704 29.696-309.248-405.504 0-10.24-130.048 428.032 0z" p-id="1767" fill="#346BC5"></path></svg>
+                                </div>
+                                <div class="standardRightTitleFlexBtttom Flex FlexJustCenter FlexAlignCenter">前端效果</div>
+                            </div>
+                            <!--前端效果-->
+                            <!--学习笔记-->
+                            <div class="Flex FlexColumn" @click="xxTitleBtnClick($event,2)">
+                                <div class="Flex FlexJustCenter FlexAlignCenter standardRightTitleFlexTop">
+                                    <svg class="qianduan" t="1642562880636" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6603" width="200" height="200"><path d="M832 42.666667a128 128 0 0 1 128 128v682.666666a128 128 0 0 1-128 128H277.333333a128.042667 128.042667 0 0 1-126.229333-106.666666H202.666667a96 96 0 0 0 4.522666-191.893334L202.666667 682.666667H149.333333v-74.666667h53.333334a96 96 0 0 0 95.893333-91.477333L298.666667 512a96 96 0 0 0-91.477334-95.893333L202.666667 416H149.333333V341.333333h53.333334a96 96 0 0 0 95.893333-91.477333L298.666667 245.333333a96 96 0 0 0-91.477334-95.893333L202.666667 149.333333H151.104A128.042667 128.042667 0 0 1 277.333333 42.666667h554.666667zM202.666667 746.666667a32 32 0 0 1 0 64h-106.666667a32 32 0 0 1 0-64h106.666667z m605.866666-445.866667a64 64 0 0 0-90.517333 0L411.413333 607.445333a42.666667 42.666667 0 0 0-12.117333 24.448l-8.64 63.829334a21.333333 21.333333 0 0 0 24.32 23.957333l62.869333-9.472a42.666667 42.666667 0 0 0 23.829334-12.010667l306.837333-306.858666a64 64 0 0 0 0-90.496zM202.666667 480a32 32 0 0 1 0 64h-106.666667a32 32 0 0 1 0-64h106.666667z m0-266.666667a32 32 0 0 1 0 64h-106.666667a32 32 0 0 1 0-64h106.666667z" fill="#346BC5" p-id="6604"></path></svg>
+                                </div>
+                                <div class="standardRightTitleFlexBtttom Flex FlexJustCenter FlexAlignCenter">学习笔记</div>
+                            </div>
+                            <!--学习笔记-->
+                            <!--答疑解析-->
+                            <div class="Flex FlexColumn" @click="xxTitleBtnClick($event,3)">
+                                <div class="Flex FlexJustCenter FlexAlignCenter standardRightTitleFlexTop">
+                                    <svg class="qianduan" t="1642563128066" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12245" width="200" height="200"><path d="M853.333333 533.333333c78.336 0 140.8 67.242667 140.8 148.992 0 68.138667-43.349333 126.208-103.168 143.658667l-3.541333 0.896 0.042667 39.253333a34.133333 34.133333 0 0 1-29.866667 33.877334l-4.266667 0.256a34.133333 34.133333 0 0 1-33.877333-29.866667l-0.256-4.266667v-68.906666a34.133333 34.133333 0 0 1 29.866667-33.877334l4.266666-0.256c39.466667 0 72.533333-35.626667 72.533334-80.768 0-45.098667-33.066667-80.725333-72.533334-80.725333-37.504 0-69.205333 32.128-72.277333 74.026667l-0.256 6.698666a34.133333 34.133333 0 1 1-68.266667 0c0-81.749333 62.464-148.992 140.8-148.992zM853.333333 930.133333a34.133333 34.133333 0 0 1 33.877334 29.866667l0.256 4.266667v17.066666a34.133333 34.133333 0 0 1-68.010667 4.266667l-0.256-4.266667v-17.066666a34.133333 34.133333 0 0 1 34.133333-34.133334z" p-id="12246" fill="#346BC5"></path><path d="M170.666667 341.333333m42.666666 0l597.333334 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-597.333334 0q-42.666667 0-42.666666-42.666667l0 0q0-42.666667 42.666666-42.666667Z" p-id="12247" fill="#346BC5"></path><path d="M375.168 85.333333a64 64 0 0 1 35.498667 10.752l5.248 3.882667 112.085333 70.698667H960a64 64 0 0 1 63.701333 57.856l0.298667 6.144v151.509333a42.666667 42.666667 0 0 1-85.034667 4.992l-0.298666-4.992V256h-417.834667a64 64 0 0 1-35.498667-10.752l-5.290666-3.925333-112-70.656H85.333333v682.666666h469.333334a42.666667 42.666667 0 0 1 42.368 37.674667l0.298666 4.992a42.666667 42.666667 0 0 1-37.674666 42.368L554.666667 938.666667h-490.666667a64 64 0 0 1-63.701333-57.856l-0.298667-6.144v-725.333334a64 64 0 0 1 57.856-63.701333l6.144-0.298667h311.168z" p-id="12248" fill="#346BC5"></path></svg>
+                                </div>
+                                <div class="standardRightTitleFlexBtttom Flex FlexJustCenter FlexAlignCenter">答疑解析</div>
+                            </div>
+                            <!--答疑解析-->
+                        </div>
+                        <!--头部-->
+                        <div class="Flex FlexJustStart FlexAlignCenter Boxtitle">优质前端库</div>
+                        <div class="Flex FlexJustCenter FlexAlignCenter FlexWrap" style="width: 100%; background-color: #F6F8FA;">
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/react.png" alt="">
+                                <a href="https://reactjs.bootcss.com/">
+                                    <h1>React</h1>
+                                    <p>用于构建用户界面的 JavaScript 框架</p>
+                                    <p>React 起源于 Facebook 的内部项目，是一个用于构建用户界面的 JavaScript 库。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/vuejs.png" alt="">
+                                <a href="https://vuejs.bootcss.com/guide/">
+                                    <h1>Vue</h1>
+                                    <p>官方文档</p>
+                                    <p>Vue - 是一套构建用户界面的渐进式框架。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/webpack.png" alt="">
+
+                                <a href="https://www.webpackjs.com/">
+                                    <h1>Webpack</h1>
+                                    <p>是前端资源模块化管理和打包工具</p>
+                                    <p>Webpack 是当下最热门的前端资源模块化管理和打包工具。</p>
+
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/typescript.png" alt="">
+
+                                <a href="https://typescript.bootcss.com/">
+                                    <h1>TypeScript</h1>
+                                    <p>TypeScript 是由微软开源的编程语言。它是 JavaScript 的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
+
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/nextjs.png" alt="">
+
+                                <a href="https://www.nextjs.cn/">
+                                    <h1>Next.js</h1>
+                                    <p>官方文档</p>
+                                    <p>Next.js 是一个轻量级的 React 服务端渲染应用框架。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/babeljs.png" alt="">
+                                <a href="https://www.babeljs.cn/">
+                                    <h1>Babel</h1>
+                                    <p>是一个 JavaScript 编译器。</p>
+                                    <p>Babel 是一个 JavaScript 编译器。Babel 通过语法转换器支持最新版本的 JavaScript 语法。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/npm.png" alt="">
+                                <a href="https://www.npmjs.cn/">
+                                    <h1>NPM</h1>
+                                    <p>NPM(node package manager)是Node.js世界的包管理器NPM可以让JavaScript 开发者在共享代码复用代码以及更新共享的代码上更加方便。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/yarn.png" alt="">
+                                <a href="https://yarn.bootcss.com/">
+                                    <h1>Yarn</h1>
+                                    <p>官方文档</p>
+                                    <p>Yarn 是一个快速、可靠、安全的依赖管理工具。是 NPM 的替代品。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/yarn.png" alt="">
+                                <a href="https://www.yarnpkg.cn/">
+                                    <h1>Yarn2</h1>
+                                    <p>Yarn 是一个快速、可靠、安全的依赖管理工具是NPM的替代品Yarn v2与v1版本有很大的不同,Yarn v2改进了CLI交互 支持workspace PnP等新功能。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/pnpm.png" alt="">
+                                <a href="https://www.pnpm.cn/">
+                                    <h1>pnpm</h1>
+                                    <p>pnpm 是一个速度快、节省磁盘空间的软件包管理器。pnpm 在功能上与 npm 和 Yarn 类似。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/nodejs.png" alt="">
+                                <a href="https://www.nodeapp.cn/">
+                                    <h1>node</h1>
+                                    <p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</p>
+                                </a>
+                            </div>
+                            <div class="JGBox Flex FlexColumn">
+                                <img src="https://cdn.jsdelivr.net/npm/@bootcss/www.bootcss.com@0.0.52/dist/img/remotion.png" alt="">
+                                <a href="https://remotion.bootcss.com/">
+                                    <h1>Remotion</h1>
+                                    <p>Remotion 是一个利用 React 等前端技术创建视频/动画的工具。你可以使用 React 和 TypeScript 编写视频并通过浏览器按照时间线查看视频。</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!--首页-->
+                    </div>
+                    <div class="xxContent">
+                        <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">前端效果</div>
+                        <div class="Flex FlexJustCenter FlexAlignCenter FlexRow" style="margin-top: -100px;">
+                            <div style="width:40%;height:120px; background:#F6F8FA; border-radius: 20px; margin: 10px;"></div>
+                            <div style="width:40%;height:120px; background:#F6F8FA; border-radius: 20px; margin: 10px;"></div>
+                        </div>
+                    </div>
+                    <div class="xxContent">
+                        <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">学习笔记</div>
+                    </div>
+                    <div class="xxContent">
+                        <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">答疑解析</div>
+                    </div>
+                    <div class="xxContent">
+                        <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">项目市场</div>
+                    </div>
+                    <div class="xxContent">
+                        <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">本网站开发者</div>
+                    </div>
+                </div>
             </div>
-            <div class="GoBtn ">登录</div>
         </div>
     </div>
+    <script src=" https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.min.js "></script>
+    <script src="/js/jquery-1.12.4.js "></script>
+    <script src="/js/js.js "></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    xxTitleIndex: 1,
+                }
+            },
+            methods: {
+                PhoneBtnFun() {
+                    console.log("123");
+                    this.xxTitleIndex++;
+                    var xxTitle = $(".xxTitle ")[0];
+                    var PhoneBtn = $(".PhoneBtn ")[0];
+                    PhoneBtn.style.transition = "all .2s ease-out ";
+                    if (this.xxTitleIndex % 2 == 0) {
+                        xxTitle.style.height = "80px ";
+                        PhoneBtn.style.transform = "rotate(180deg) ";
+                        // return;
+                    } else {
+                        xxTitle.style.height = "40px ";
+                        PhoneBtn.style.transform = "rotate(0deg) ";
+                    }
+
+                },
+                xxTitleBtnClick(event, number) {
+                    var xxTitleDiv = $(".xxTitle> div");
+                    var xxContent = $(".xxContent");
+                    for (var i = 0; i < xxTitleDiv.length; i++) {
+                        xxTitleDiv[i].className = "xxTitleBtn";
+                        xxContent[i].style.display = "none";
+                    }
+                    xxTitleDiv[number].className = "xxTitleBtnHover";
+                    xxTitleDiv[number].style.transition = "all .2s ease-out";
+                    xxContent[number].style.display = "inline-block";
+                    console.log(number);
+                },
+            },
+        });
+        app.mount("#app");
+        const app2 = Vue.createApp({
+            data() {
+                return {}
+            },
+            methods: {
+                xxTitleBtnClick(event, number) {
+                    // console.log(number);
+                    var xxTitleDiv = $(".xxTitle> div");
+                    var xxContent = $(".xxContent");
+                    for (var i = 0; i < xxTitleDiv.length; i++) {
+                        xxTitleDiv[i].className = "xxTitleBtn";
+                        xxContent[i].style.display = "none";
+                    }
+                    xxTitleDiv[number].className = "xxTitleBtnHover";
+                    xxTitleDiv[number].style.transition = "all .2s ease-out";
+                    xxContent[number].style.display = "inline-block";
+                },
+            }
+
+        }).mount("#Bodyapp")
+    </script>
 </body>
 
-<script>
-    var GoBtn = document.getElementsByClassName("GoBtn ")[0];
-
-
-    function MessageBoxFun(text) {
-        var MessageBox = document.getElementsByClassName("MessageBox ")[0];
-        MessageBox.innerHTML = text;
-        MessageBox.style.top = "20px ";
-        setTimeout(() => {
-            MessageBox.style.top = "-50px ";
-        }, 500);
-    }
-    GoBtn.onclick = function() {
-
-    }
-</script>
-<script src="vue.js "></script>
+</html>
 
 </html>
