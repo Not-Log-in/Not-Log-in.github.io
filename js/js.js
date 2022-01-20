@@ -1,5 +1,78 @@
 var xxTitle = document.getElementsByClassName("xxTitle")[0];
-
+/*控制前台颜色 引入 vue date 进行循环的数据*/
+let colorList = [
+        [{
+            color: '#2B4653'
+        }, {
+            color: '#439D8F'
+        }, {
+            color: '#E5C467'
+        }, {
+            color: '#EDA260'
+        }, {
+            color: '#DE7051'
+        }], /*下一个*/
+        [{
+            color: '#cb997e'
+        }, {
+            color: '#ddbea9'
+        }, {
+            color: '#ffe8d6'
+        }, {
+            color: '#b7b7a4'
+        }, {
+            color: '#a5a58d'
+        }, {
+            color: '#6b705c'
+        }], /*下一个*/
+        [{
+            color: '#87b38d'
+        }, {
+            color: '#87b38d'
+        }], /*下一个*/
+        [{
+            color: '#003049'
+        }, {
+            color: '#d62828'
+        }, {
+            color: '#f77f00'
+        }, {
+            color: '#fcbf49'
+        }, {
+            color: '#eae2b7'
+        }], /*下一个*/
+        [{
+            color: '#03045e'
+        }, {
+            color: '#023e8a'
+        }, {
+            color: '#0077b6'
+        }, {
+            color: '#0096c7'
+        }, {
+            color: '#00b4d8'
+        }, {
+            color: '#48cae4'
+        }, {
+            color: '#90e0ef'
+        }, {
+            color: '#ade8f4'
+        }, {
+            color: '#caf0f8'
+        }], /*下一个*/
+        [{
+            color: '#cdb4db'
+        }, {
+            color: '#ffc8dd'
+        }, {
+            color: '#ffafcc'
+        }, {
+            color: '#bde0fe'
+        }, {
+            color: '#a2d2ff'
+        }],
+    ]
+    /*控制前台颜色*/
 function AnimationD(Element, time, GoTime, animationName) { //动画延迟function
     //参数一 元素, 参数二时间,参数三 跨距,参数四 动画名称
     var Element = Element;
@@ -88,6 +161,7 @@ function ClickContentBox(number) {
 }
 AnimationD(document.getElementsByClassName("JGBox"), 0.2, 0.1, "JGBoxAnimation");
 AnimationD(document.querySelectorAll(".standardLeftFixedContent2 div"), 0.1, 0.05, "standardLeftFixedContent2DivAnimation");
+AnimationD(document.getElementsByClassName("ColorMatchBox"), 0.2, 0.1, "ColorMatchBoxAnimation");
 
 function CopyFun() {
     navigator.clipboard.writeText('Yoawdw');
