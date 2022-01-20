@@ -70,6 +70,92 @@ let colorList = [
             color: '#bde0fe'
         }, {
             color: '#a2d2ff'
+        }], /*下一个*/
+        [{
+            color: '#fbf8cc'
+        }, {
+            color: '#fde4cf'
+        }, {
+            color: '#ffcfd2'
+        }, {
+            color: '#f1c0e8'
+        }, {
+            color: '#cfbaf0'
+        }, {
+            color: '#a3c4f3'
+        }, {
+            color: '#90dbf4'
+        }, {
+            color: '#8eecf5'
+        }, {
+            color: '#98f5e1'
+        }, {
+            color: '#b9fbc0'
+        }], /*下一个*/
+        [{
+            color: '#e63946'
+        }, {
+            color: '#f1faee'
+        }, {
+            color: '#a8dadc'
+        }, {
+            color: '#457b9d'
+        }, {
+            color: '#1d3557'
+        }], /*下一个*/
+        [{
+            color: '#d9ed92'
+        }, {
+            color: '#b5e48c'
+        }, {
+            color: '#99d98c'
+        }, {
+            color: '#76c893'
+        }, {
+            color: '#52b69a'
+        }, {
+            color: '#34a0a4'
+        }, {
+            color: '#168aad'
+        }, {
+            color: '#1a759f'
+        }, {
+            color: '#1e6091'
+        }, {
+            color: '#184e77'
+        }], /*下一个*/
+        [{
+            color: '#000814'
+        }, {
+            color: '#001d3d'
+        }, {
+            color: '#003566'
+        }, {
+            color: '#ffc300'
+        }, {
+            color: '#ffd60a'
+        }], /*下一个*/
+        [{
+            color: '#ffbe0b'
+        }, {
+            color: '#fb5607'
+        }, {
+            color: '#ff006e'
+        }, {
+            color: '#8338ec'
+        }, {
+            color: '#3a86ff'
+        }], /*下一个*/
+        [{
+            color: '#78c0e0'
+        }, {
+            color: '#449dd1'
+        }, {
+            color: '#192bc2'
+        }, {
+            color: '#150578'
+        }, {
+            color: '#0e0e52'
         }],
     ]
     /*控制前台颜色*/
