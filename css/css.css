@@ -419,6 +419,42 @@
         border-radius: 20px;
         user-select: none;
         margin: 0px 10px;
+        margin-bottom: 10px;
+        animation: ColorMatchBoxAnimation .4s ease-out;
+    }
+    
+    @keyframes ColorMatchBoxAnimation {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    
+    .BigSmail {
+        animation: BigSmailAnimation .4s ease-out;
+        display: inline-block;
+    }
+    
+    @keyframes BigSmailAnimation {
+        0% {
+            transform: scale(1);
+        }
+        20% {
+            transform: scale(0.6);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        70% {
+            transform: scale(0.95);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
     
     .ColorMatch {
@@ -426,6 +462,7 @@
         line-height: 140px;
         text-align: center;
         color: white;
+        font-weight: bold;
     }
     /* .ColorMatch:hover {
         flex: 2.5;
@@ -463,6 +500,25 @@
     .WebMainName {
         margin-left: 10px;
         font-size: 14px;
+    }
+    
+    .MessageBox {
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        background: #000000;
+        border-radius: 40px;
+        text-align: center;
+        color: white;
+        position: fixed;
+        bottom: 10px;
+        transform: translateY(100px);
+    }
+    
+    .MessageBox>svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
     }
     
     .standardRightTitle {
