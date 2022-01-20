@@ -201,25 +201,24 @@
                         <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart bacSize">前端效果</div>
                         <div class="standardRightTitleContent">配色搭配</div>
                         <div class="Flex  FlexJustCenter FlexAlignStart FlexWrap">
-                            <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover">
-                                <div class="ColorMatch" style="background:#2B4653;" @mouseover="ColorMatchHover(1,0,'#2B4653')" @click="ColorMatchClick(1,0,'#2B4653')"></div>
-                                <div class="ColorMatch" style="background:#439D8F;" @mouseover="ColorMatchHover(1,1,'#439D8F')" @click="ColorMatchClick(1,1,'#439D8F')"></div>
-                                <div class="ColorMatch" style="background:#E5C467;" @mouseover="ColorMatchHover(1,2,'#E5C467')" @click="ColorMatchClick(1,2,'#E5C467')"></div>
-                                <div class="ColorMatch" style="background:#EDA260;" @mouseover="ColorMatchHover(1,3,'#EDA260')" @click="ColorMatchClick(1,3,'#EDA260')"></div>
-                                <div class="ColorMatch" style="background:#DE7051;" @mouseover="ColorMatchHover(1,4,'#DE7051')" @click="ColorMatchClick(1,4,'#DE7051')"></div>
+                            <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover" v-for="(item,index) in colorList">
+                                <template v-for="(items,indexs) in colorList[index]">
+                                    <div class="ColorMatch" :style="{background:colorList[index][indexs].color}" @mouseover="ColorMatchHover(index+1,indexs,colorList[index][indexs].color)" @click="ColorMatchClick(index+1,indexs,colorList[index][indexs].color)">
+                                </template>
                             </div>
-                            <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover">
-                                <div class="ColorMatch" style="background:#cb997e;" @mouseover="ColorMatchHover(2,0,'#cb997e')" @click="ColorMatchClick(2,0,'#cb997e')"></div>
-                                <div class="ColorMatch" style="background:#ddbea9;" @mouseover="ColorMatchHover(2,1,'#ddbea9')" @click="ColorMatchClick(2,1,'#ddbea9')"></div>
-                                <div class="ColorMatch" style="background:#ffe8d6;" @mouseover="ColorMatchHover(2,2,'#E5C467')" @click="ColorMatchClick(2,2,'#ffe8d6')"></div>
-                                <div class="ColorMatch" style="background:#b7b7a4;" @mouseover="ColorMatchHover(2,3,'#b7b7a4')" @click="ColorMatchClick(2,3,'#b7b7a4')"></div>
-                                <div class="ColorMatch" style="background:#a5a58d;" @mouseover="ColorMatchHover(2,4,'#DE7051')" @click="ColorMatchClick(2,4,'#a5a58d')"></div>
-                                <div class="ColorMatch" style="background:#6b705c;" @mouseover="ColorMatchHover(2,5,'#6b705c')" @click="ColorMatchClick(2,5,'#6b705c')"></div>
-                            </div>
-                            <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover">
-                                <div class="ColorMatch" style="background:#87b38d;" @mouseover="ColorMatchHover(3,0,'#87b38d')" @click="ColorMatchClick(3,0,'#87b38d')"></div>
-                                <div class="ColorMatch" style="background:#87b38d;" @mouseover="ColorMatchHover(3,1,'#87b38d')" @click="ColorMatchClick(3,1,'#87b38d')"></div>
-                            </div>
+                        </div>
+                        <div class="Flex FlexJustCenter FlexAlignCenter">
+                            <div style="width: 98%; height: 50px; line-height: 50px; text-align: center; background:white; font-size: 25px; border-radius: 20px; font-weight: bold; color: #5674DA;">站长推荐</div>
+                        </div>
+                        <div class="Flex FlexJustCenter FlexAlignCenter FlexWrap">
+                            <div style="width: 23%; height: 170px; background:red; margin:5px;"></div>
+                            <div style="width: 23%; height: 170px; background:red; margin:5px;"></div>
+                            <div style="width: 23%; height: 170px; background:red; margin:5px;"></div>
+                            <div style="width: 23%; height: 170px; background:red; margin:5px;"></div>
+                            <div style="width: 23%; height: 170px; background:red; margin:5px;"></div>
+                            <div style="width: 23%; height: 170px; background:red; margin:5px;"></div>
+                            <div style="width: 23%; height: 170px; background:red; margin:5px;"></div>
+                            <div style="width: 23%; height: 170px; background:red; margin:5px;"></div>
                         </div>
                     </div>
                     <div class="xxContent">
@@ -236,6 +235,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!--提示区-->
+        <div class="MessageBox Flex FlexJustCenter FlexAlignCenter" <svg t="1642649212762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2141" width="200" height="200">
+            <svg t="1642649247447" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2332" width="200" height="200"><path d="M416.832 798.08C400.64 798.08 384.512 791.872 372.16 779.52L119.424 525.76C94.784 500.992 94.784 460.8 119.424 436.032 144.128 411.264 184.128 411.264 208.768 436.032L416.832 644.928 814.4 245.76C839.04 220.928 879.04 220.928 903.744 245.76 928.384 270.528 928.384 310.656 903.744 335.424L461.504 779.52C449.152 791.872 432.96 798.08 416.832 798.08Z" p-id="2333" fill="#e6e6e6"></path></svg>
+            <span>颜色已复制到剪切板</span>
         </div>
     </div>
     <script src=" https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.min.js "></script>
@@ -263,7 +267,6 @@
                         xxTitle.style.height = "40px ";
                         PhoneBtn.style.transform = "rotate(0deg) ";
                     }
-
                 },
                 xxTitleBtnClick(event, number) {
                     var xxTitleDiv = $(".xxTitle> div");
@@ -275,14 +278,17 @@
                     xxTitleDiv[number].className = "xxTitleBtnHover";
                     xxTitleDiv[number].style.transition = "all .2s ease-out";
                     xxContent[number].style.display = "inline-block";
-                    console.log(number);
                 },
             },
         });
         app.mount("#app");
         const app2 = Vue.createApp({
             data() {
-                return {}
+                return {
+                    //外部数组内返回类型，在内查找元素详细参数
+                    //ES6语法 键值对相同 可以就写一个
+                    colorList
+                }
             },
             methods: {
                 xxTitleBtnClick(event, number) {
@@ -299,30 +305,46 @@
                 },
                 ColorMatchHover(fatherNumber, number, color) {
                     var ColorMatchBoxDiv = $(".ColorMatchBox:nth-child(" + fatherNumber + ") > .ColorMatch");
+                    this.ColorGoByeFun(ColorMatchBoxDiv);
+                    ColorMatchBoxDiv[number].style.flex = "2.5";
+                    ColorMatchBoxDiv[number].style.boxShadow = "0px 0px 20px 0px rgba(0,0,0,0.2)";
+                    ColorMatchBoxDiv[number].innerHTML = color;
+
+                },
+                ColorGoByeFun(Element) { //前端效果初始化颜色框公用 Funcion
+                    var ColorMatchBoxDiv = Element;
                     for (var i = 0; i < ColorMatchBoxDiv.length; i++) {
                         ColorMatchBoxDiv[i].style.flex = "1";
                         ColorMatchBoxDiv[i].innerHTML = "";
+                        ColorMatchBoxDiv[i].style.boxShadow = "0px 0px 0px 0px rgba(0,0,0,0)";
                     }
-                    console.log(ColorMatchBoxDiv[number].style.background);
-                    ColorMatchBoxDiv[number].style.flex = "2.5";
-                    ColorMatchBoxDiv[number].innerHTML = "Copy";
                 },
                 ColorMatchNoHover(fatherNumber) {
-                    var ColorMatchBoxDiv = $(".ColorMatch");
-                    for (var i = 0; i < ColorMatchBoxDiv.length; i++) {
-                        ColorMatchBoxDiv[i].style.flex = "1";
-                        ColorMatchBoxDiv[i].innerHTML = "";
-                    }
+                    this.ColorGoByeFun($(".ColorMatch"));
                 },
                 ColorMatchClick(fatherNumber, number, color) {
                     var ColorMatchBoxDiv = $(".ColorMatchBox:nth-child(" + fatherNumber + ") > .ColorMatch");
                     // console.log(ColorMatchBoxDiv[number].style.background);
                     navigator.clipboard.writeText(color);
+                    ColorMatchBoxDiv[number].innerHTML = "<span class='BigSmail'>OK</span>";
+                    this.MessageFun();
                     document.execCommand('Copy');
-                    return fatherNumber + number + color;
+                    return {
+                        fatherNumber,
+                        number,
+                        color
+                    };
+                },
+                MessageFun() { //颜色copy成功弹出 Funcion
+                    var MessageBox = $(".MessageBox")[0];
+                    MessageBox.display = "flex";
+                    MessageBox.style.transform = "translateY(0px)";
+                    setTimeout(() => {
+                        MessageBox.display = "none";
+                        MessageBox.style.transform = "translateY(100px)";
+                    }, 1000);
                 }
             }
-
         }).mount("#Bodyapp")
     </script>
 </body>
