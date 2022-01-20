@@ -560,6 +560,57 @@
         transform: translateY(4px);
     }
     
+    .VideoBox {
+        width: 18%;
+        margin: 10px 5px 0px 5px;
+        overflow: hidden;
+        border-radius: 4px;
+        position: relative;
+    }
+    
+    .VideoBoxHover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: scale(2);
+        overflow: hidden;
+    }
+    
+    .VideoBoxHover svg {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .VideoBox:hover .VideoBoxHover {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    .VideoBox>img {
+        width: 100%;
+    }
+    
+    .VideoBox:hover img {
+        transform: scale(1.05);
+    }
+    /* .VideoBoxBottom {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.2);
+        transform: translateY(110px);
+        color: white;
+        padding-left: 20px;
+    }
+    
+    .VideoBox:hover .VideoBoxBottom {
+        transform: translateY(0px);
+        padding-top: 30px;
+        padding-left: 10px;
+    } */
+    
     @media(max-width:1800px) {
         .standardRightTitleFlex>div {
             width: 25%;
@@ -571,11 +622,17 @@
             width: 22%;
             margin: 10px;
         }
+        .VideoBox {
+            width: 23.5%;
+        }
     }
     
     @media (max-width:1280px) {
         .standardLeft {
             width: 24%;
+        }
+        .VideoBox {
+            width: 23.5%;
         }
     }
     
@@ -603,6 +660,9 @@
         .ColorMatch {
             line-height: 150px;
         }
+        .VideoBox {
+            width: 30%;
+        }
     }
     
     @media (max-width:980px) {
@@ -619,6 +679,9 @@
         }
         .ColorMatch {
             line-height: 160px;
+        }
+        .VideoBox {
+            width: 40%;
         }
     }
     
@@ -660,6 +723,9 @@
         }
         .ColorMatch {
             line-height: 130px;
+        }
+        .VideoBox {
+            width: 30%;
         }
     }
     
@@ -704,6 +770,10 @@
         }
         .ColorMatch {
             line-height: 150px;
+        }
+        .VideoBox {
+            margin: 2%;
+            width: 40%;
         }
     }
     
