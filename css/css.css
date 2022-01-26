@@ -1,295 +1,309 @@
-    * {
-        margin: 0;
-        padding: 0;
-        transition: all .2s ease-out;
-    }
-    
-    a {
-        text-decoration: none;
-    }
-    /**/
-    
-     ::-webkit-scrollbar {
-        /*垂直滚动条的宽*/
-        width: 1vh;
-        /* height: 16px; */
-        background-color: white;
-    }
-    /*修改垂直滚动条的样式*/
-    
-     ::-webkit-scrollbar-thumb:vertical {
-        /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)); */
-        background-color: skyblue;
-        border-radius: 2px;
-    }
-    
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-        background-color: #F6F8FA;
-    }
-    
-    .bacSize {
-        background-size: center;
-        background-position: center;
-    }
-    
-    .Flex {
-        display: flex;
-    }
-    
-    .FlexRow {
-        flex-direction: row;
-    }
-    
-    .FlexColumn {
-        flex-direction: column;
-    }
-    
-    .FlexJustCenter {
-        justify-content: center;
-    }
-    
-    .FlexJustStart {
-        justify-content: flex-start;
-    }
-    
-    .FlexJustAround {
-        justify-content: space-around;
-    }
-    
-    .FlexWrap {
-        flex-wrap: wrap;
-    }
-    
-    .FlexJustEnd {
-        justify-content: flex-end;
-    }
-    
-    .FlexAlignStart {
-        align-items: flex-start;
-    }
-    
-    .FlexAlignEnd {
-        align-items: flex-end;
-    }
-    
-    .FlexAlignCenter {
-        align-items: center;
-    }
-    /*头部*/
-    
-    .xxTitle {
-        width: 2000px;
-        height: 60px;
-        background-color: #25292F;
-        padding-left: 30px;
-        font-weight: bold;
-        position: relative;
-        transition: all .2s ease-out;
-    }
-    
-    .xxContent:first-child {
-        display: inline-block;
-    }
-    
-    .xxContent {
-        width: 100%;
-        display: none;
-    }
-    
-    .logo {
-        width: 50px;
-        height: 50px;
-        transform: translateY(3px);
-        margin-right: 30px;
-        animation: logoAnimation .4s ease-out;
-    }
-    
-    @keyframes logoAnimation {
-        0% {
-            transform: scale(1) translateY(3px);
+        * {
+            margin: 0;
+            padding: 0;
+            transition: all .2s ease-out;
         }
-        20% {
-            transform: scale(0.2) translateY(3px);
+        
+        a {
+            text-decoration: none;
         }
-        50% {
-            transform: scale(1.2) translateY(3px);
+        
+        textarea {
+            user-select: none;
+            outline: none;
+            transition: none;
+            margin: 4px;
+            width: 32%;
+            min-height: 300px;
+            border: none;
+            border-radius: 10px;
+            resize: none;
+            padding: 5px;
+            box-sizing: border-box;
         }
-        70% {
-            transform: scale(0.95) translateY(3px);
+        /**/
+        
+         ::-webkit-scrollbar {
+            /*垂直滚动条的宽*/
+            width: 1vh;
+            /* height: 16px; */
+            background-color: white;
         }
-        100% {
-            transform: scale(1) translateY(3px);
+        /*修改垂直滚动条的样式*/
+        
+         ::-webkit-scrollbar-thumb:vertical {
+            /* background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)); */
+            background-color: white;
+            border-radius: 2px;
         }
-    }
-    
-    .kepuVideo {
-        margin: 4px 0px 10px 0px;
-        animation: videoAnimation .5s ease-out;
-    }
-    
-    @keyframes videoAnimation {
-        0% {
-            transform: scale(1) translateY(-100px);
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #F6F8FA;
         }
-        20% {
-            transform: scale(0.5) translateY(0px);
+        
+        .bacSize {
+            background-size: center;
+            background-position: center;
         }
-        50% {
-            transform: scale(1.1) translateY(0px);
+        
+        .Flex {
+            display: flex;
         }
-        70% {
-            transform: scale(0.95) translateY(0px);
+        
+        .FlexRow {
+            flex-direction: row;
         }
-        100% {
-            transform: scale(1) translateY(0px);
-            ;
+        
+        .FlexColumn {
+            flex-direction: column;
         }
-    }
-    
-    .xxTitle>div {
-        margin-left: 20px;
-        user-select: none;
-        animation: xxTitleDivAnimation .4s ease-out;
-        padding: 0px 2px 0px 2px;
-        /* height: 100%;
+        
+        .FlexJustCenter {
+            justify-content: center;
+        }
+        
+        .FlexJustStart {
+            justify-content: flex-start;
+        }
+        
+        .FlexJustAround {
+            justify-content: space-around;
+        }
+        
+        .FlexWrap {
+            flex-wrap: wrap;
+        }
+        
+        .FlexJustEnd {
+            justify-content: flex-end;
+        }
+        
+        .FlexAlignStart {
+            align-items: flex-start;
+        }
+        
+        .FlexAlignEnd {
+            align-items: flex-end;
+        }
+        
+        .FlexAlignCenter {
+            align-items: center;
+        }
+        /*头部*/
+        
+        .xxTitle {
+            width: 2000px;
+            height: 60px;
+            background-color: #25292F;
+            padding-left: 30px;
+            font-weight: bold;
+            position: relative;
+            transition: all .2s ease-out;
+        }
+        
+        .xxContent:first-child {
+            display: inline-block;
+        }
+        
+        .xxContent {
+            width: 100%;
+            display: none;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            transform: translateY(3px);
+            margin-right: 30px;
+            animation: logoAnimation .4s ease-out;
+        }
+        
+        @keyframes logoAnimation {
+            0% {
+                transform: scale(1) translateY(3px);
+            }
+            20% {
+                transform: scale(0.2) translateY(3px);
+            }
+            50% {
+                transform: scale(1.2) translateY(3px);
+            }
+            70% {
+                transform: scale(0.95) translateY(3px);
+            }
+            100% {
+                transform: scale(1) translateY(3px);
+            }
+        }
+        
+        .kepuVideo {
+            margin: 4px 0px 10px 0px;
+            animation: videoAnimation .5s ease-out;
+        }
+        
+        @keyframes videoAnimation {
+            0% {
+                transform: scale(1) translateY(-100px);
+            }
+            20% {
+                transform: scale(0.5) translateY(0px);
+            }
+            50% {
+                transform: scale(1.1) translateY(0px);
+            }
+            70% {
+                transform: scale(0.95) translateY(0px);
+            }
+            100% {
+                transform: scale(1) translateY(0px);
+                ;
+            }
+        }
+        
+        .xxTitle>div {
+            margin-left: 20px;
+            user-select: none;
+            animation: xxTitleDivAnimation .4s ease-out;
+            padding: 0px 2px 0px 2px;
+            /* height: 100%;
     line-height: 60px; */
-    }
-    
-    @keyframes xxTitleDivAnimation {
-        from {
-            transform: translateY(-20px) scale(0);
         }
-        to {
-            transform: translateY(0px) scale(1);
+        
+        @keyframes xxTitleDivAnimation {
+            from {
+                transform: translateY(-20px) scale(0);
+            }
+            to {
+                transform: translateY(0px) scale(1);
+            }
         }
-    }
-    
-    .xxTitleBtn {
-        color: #ccc;
-    }
-    
-    .xxTitleBtnHover {
-        color: white;
-        /* background-color: red; */
-        /* line-height: 50px; */
-    }
-    /*主要展示部分*/
-    
-    .standard {
-        width: 2000px;
-    }
-    
-    .standardLeft {
-        width: 20%;
-        background-color: #F6F8FA;
-        /* border-right: 2px solid #D9DEE4; */
-        height: 1000px;
-    }
-    
-    .standardRight {
-        width: 80%;
-        background-color: white;
-        position: relative;
-        background: #F6F8FA;
-    }
-    
-    .technologyBtnBox {
-        margin-top: 15px;
-    }
-    
-    .standardLeftFixed {
-        box-sizing: border-box;
-        padding-left: 7px;
-        border-right: 2px solid #D9DEE4;
-        height: 1000px;
-        width: 100%;
-        position: relative;
-        transition: none;
-        /* width: 20%;
+        
+        .xxTitleBtn {
+            color: #ccc;
+        }
+        
+        .xxTitleBtnHover {
+            color: white;
+            /* background-color: red; */
+            /* line-height: 50px; */
+        }
+        /*主要展示部分*/
+        
+        .standard {
+            width: 2000px;
+        }
+        
+        .standardLeft {
+            width: 20%;
+            background-color: #F6F8FA;
+            /* border-right: 2px solid #D9DEE4; */
+            height: 1000px;
+        }
+        
+        .standardRight {
+            width: 80%;
+            background-color: white;
+            position: relative;
+            background: #F6F8FA;
+        }
+        
+        .technologyBtnBox {
+            margin-top: 15px;
+        }
+        
+        .standardLeftFixed {
+            box-sizing: border-box;
+            padding-left: 7px;
+            border-right: 2px solid #D9DEE4;
+            height: 1000px;
+            width: 100%;
+            position: relative;
+            transition: none;
+            /* width: 20%;
     position: fixed; */
-        /* background: red; */
-    }
-    
-    .standardLeftFixed>video {
-        /* position: absolute; */
-        width: 98%;
-        border-radius: 20px;
-        transition: all .2s ease-out;
-        position: relative;
-        z-index: 999;
-    }
-    
-    .standardLeftFixedTitle {
-        box-sizing: border-box;
-        width: 100%;
-        height: 35px;
-        line-height: 35px;
-        font-weight: bold;
-        padding-left: 10px;
-        font-size: 18px;
-        animation: standardLeftFixedTitleAnimation .4s ease-out;
-        transform-origin: 0% 0%;
-    }
-    
-    .standardRightTitleFlex {
-        flex-direction: row;
-        margin-top: -130px;
-    }
-    
-    .standardRightTitleFlex>div {
-        width: 20%;
-        height: 200px;
-        background-color: white;
-        margin: 20px;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        overflow: hidden;
-        user-select: none;
-        /* animation: standardRightTitleFlexDivAnimation .4s ease-out; */
-    }
-    
-    .standardRightTitleContent {
-        width: 200px;
-        height: 60px;
-        line-height: 60px;
-        background: #F6F8FA;
-        font-size: 35px;
-        margin: -60px 0px 10px 0px;
-        border-radius: 0px 20px 0px 0px;
-        color: #4E74D9;
-        font-weight: bold;
-        text-align: center;
-        animation: standardRightTitleContentAnimation .4s ease-out;
-    }
-    
-    @keyframes standardRightTitleContentAnimation {
-        from {
-            transform: translateY(60px);
-            opacity: 0;
+            /* background: red; */
         }
-        to {
-            transform: translateY(0px);
-            opacity: 1;
+        
+        .standardLeftFixed>video {
+            /* position: absolute; */
+            width: 98%;
+            border-radius: 20px;
+            transition: all .2s ease-out;
+            position: relative;
+            z-index: 999;
         }
-    }
-    
-    .JGBox {
-        width: 250px;
-        height: 280px;
-        box-sizing: border-box;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        margin: 20px;
-        overflow: hidden;
-        text-align: center;
-        animation: JGBoxAnimation .4s ease-out;
-    }
-    
-    @keyframes JGBoxAnimation {
-        /* 0% {
+        
+        .standardLeftFixedTitle {
+            box-sizing: border-box;
+            width: 100%;
+            height: 35px;
+            line-height: 35px;
+            font-weight: bold;
+            padding-left: 10px;
+            font-size: 18px;
+            animation: standardLeftFixedTitleAnimation .4s ease-out;
+            transform-origin: 0% 0%;
+        }
+        
+        .standardRightTitleFlex {
+            flex-direction: row;
+            margin-top: -130px;
+        }
+        
+        .standardRightTitleFlex>div {
+            width: 20%;
+            height: 200px;
+            background-color: white;
+            margin: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            user-select: none;
+            /* animation: standardRightTitleFlexDivAnimation .4s ease-out; */
+        }
+        
+        .standardRightTitleContent {
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+            background: #F6F8FA;
+            font-size: 35px;
+            margin: -60px 0px 0px 0px;
+            border-radius: 0px 20px 0px 0px;
+            color: #4E74D9;
+            font-weight: bold;
+            text-align: center;
+            animation: standardRightTitleContentAnimation .4s ease-out;
+        }
+        
+        @keyframes standardRightTitleContentAnimation {
+            from {
+                transform: translateY(60px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        
+        .JGBox {
+            width: 250px;
+            height: 280px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin: 20px;
+            overflow: hidden;
+            text-align: center;
+            animation: JGBoxAnimation .4s ease-out;
+        }
+        
+        @keyframes JGBoxAnimation {
+            /* 0% {
             transform: scale(1) translateY(-20px);
         }
         20% {
@@ -304,482 +318,475 @@
         100% {
             transform: scale(1) translateY(0px);
         } */
-        from {
-            transform: translateY(-50px);
+            from {
+                transform: translateY(-50px);
+            }
+            to {
+                transform: translateY(0px);
+            }
         }
-        to {
-            transform: translateY(0px);
+        
+        .JGBox:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
         }
-    }
-    
-    .JGBox:hover {
-        transform: translateY(-10px);
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
-    }
-    
-    .JGBox p {
-        width: 90%;
-        text-align: center;
-        margin: 0 auto;
-        color: rgb(83, 83, 83);
-    }
-    
-    .JGBox h1 {
-        color: #427AB8;
-    }
-    
-    .JGBox>img {
-        width: 100%;
-    }
-    
-    @keyframes standardRightTitleFlexDivAnimation {
-        from {
-            transform: translateY(50px);
-            opacity: 0;
+        
+        .JGBox p {
+            width: 90%;
+            text-align: center;
+            margin: 0 auto;
+            color: rgb(83, 83, 83);
         }
-        to {
-            transform: translateY(0px);
-            opacity: 1;
+        
+        .JGBox h1 {
+            color: #427AB8;
         }
-    }
-    
-    .standardRightTitleFlex>div:hover {
-        transform: translateY(-10px);
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-    }
-    /* .standardRightTitleFlex>div:active {
+        
+        .JGBox>img {
+            width: 100%;
+        }
+        
+        @keyframes standardRightTitleFlexDivAnimation {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        
+        .standardRightTitleFlex>div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+        }
+        /* .standardRightTitleFlex>div:active {
     transform: scale(1.5);
     opacity: 0;
 } */
-    
-    .standardRightTitleFlexTop {
-        flex: 2;
-        width: 100%;
-    }
-    
-    .standardRightTitleFlexBtttom {
-        flex: 1;
-        width: 100%;
-        background-color: #F4F6FA;
-        text-align: center;
-        font-size: 24px;
-        font-weight: bold;
-        color: #3474D7;
-    }
-    
-    .qianduan {
-        width: 50%;
-        height: 50%;
-        transform: translate(-5%, 0px) scale(1.3);
-    }
-    
-    @keyframes standardLeftFixedTitleAnimation {
-        from {
-            transform: translateY(-20px) scale(0.2);
-            opacity: 0;
+        
+        .standardRightTitleFlexTop {
+            flex: 2;
+            width: 100%;
         }
-        to {
-            transform: translateY(0px) scale(1);
-            opacity: 1;
+        
+        .standardRightTitleFlexBtttom {
+            flex: 1;
+            width: 100%;
+            background-color: #F4F6FA;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #3474D7;
         }
-    }
-    
-    .standardLeftFixedContent {
-        width: 100%;
-        height: 22px;
-        line-height: 22px;
-        font-weight: bold;
-        font-size: 15px;
-        /* padding-left: 20px; */
-        text-align: center;
-        animation: standardLeftFixedContentAnimation .4s ease-out;
-    }
-    
-    .standardLeftFixedContent2 {
-        width: 98%;
-        height: 300px;
-        padding: 0px 10px;
-        box-sizing: border-box;
-        border-radius: 20px;
-    }
-    
-    .standardLeftFixedContent2>a>div {
-        margin-top: 10px;
-        color: black;
-    }
-    
-    .standardLeftFixedContent2 div {
-        animation: standardLeftFixedContent2DivAnimation .4s ease-out;
-    }
-    
-    .ColorMatchBox {
-        width: 30%;
-        height: 140px;
-        overflow: hidden;
-        border-radius: 20px;
-        user-select: none;
-        margin: 0px 10px;
-        margin-bottom: 10px;
-        animation: ColorMatchBoxAnimation .4s ease-out;
-    }
-    
-    @keyframes ColorMatchBoxAnimation {
-        from {
-            transform: translateY(20px);
-            opacity: 0;
+        
+        .qianduan {
+            width: 50%;
+            height: 50%;
+            transform: translate(-5%, 0px) scale(1.3);
         }
-        to {
-            transform: translateY(0px);
-            opacity: 1;
+        
+        @keyframes standardLeftFixedTitleAnimation {
+            from {
+                transform: translateY(-20px) scale(0.2);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px) scale(1);
+                opacity: 1;
+            }
         }
-    }
-    
-    .BigSmail {
-        animation: BigSmailAnimation .4s ease-out;
-        display: inline-block;
-    }
-    
-    @keyframes BigSmailAnimation {
-        0% {
-            transform: scale(1);
+        
+        .standardLeftFixedContent {
+            width: 100%;
+            height: 22px;
+            line-height: 22px;
+            font-weight: bold;
+            font-size: 15px;
+            /* padding-left: 20px; */
+            text-align: center;
+            animation: standardLeftFixedContentAnimation .4s ease-out;
         }
-        20% {
-            transform: scale(0.6);
+        
+        .standardLeftFixedContent2 {
+            width: 98%;
+            height: 300px;
+            padding: 0px 10px;
+            box-sizing: border-box;
+            border-radius: 20px;
         }
-        50% {
-            transform: scale(1.2);
+        
+        .standardLeftFixedContent2>a>div {
+            margin-top: 10px;
+            color: black;
         }
-        70% {
-            transform: scale(0.95);
+        
+        .standardLeftFixedContent2 div {
+            animation: standardLeftFixedContent2DivAnimation .4s ease-out;
         }
-        100% {
-            transform: scale(1);
+        
+        .ColorMatchBox {
+            width: 30%;
+            height: 140px;
+            overflow: hidden;
+            border-radius: 20px;
+            user-select: none;
+            margin: 0px 10px;
+            margin-bottom: 10px;
+            animation: ColorMatchBoxAnimation .4s ease-out;
         }
-    }
-    
-    .ColorMatch {
-        flex: 1;
-        line-height: 140px;
-        text-align: center;
-        color: white;
-        font-weight: bold;
-    }
-    /* .ColorMatch:hover {
+        
+        @keyframes ColorMatchBoxAnimation {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        
+        .BigSmail {
+            animation: BigSmailAnimation .4s ease-out;
+            display: inline-block;
+        }
+        
+        @keyframes BigSmailAnimation {
+            0% {
+                transform: scale(1);
+            }
+            20% {
+                transform: scale(0.6);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            70% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .ColorMatch {
+            flex: 1;
+            line-height: 140px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+        /* .ColorMatch:hover {
         flex: 2.5;
     } */
-    
-    @keyframes standardLeftFixedContent2DivAnimation {
-        from {
-            transform: translateY(-30px);
-            opacity: 0;
+        
+        @keyframes standardLeftFixedContent2DivAnimation {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
         }
-        to {
-            transform: translateY(0px);
-            opacity: 1;
-        }
-    }
-    /* .standardLeftFixedContent2 div:hover {
+        /* .standardLeftFixedContent2 div:hover {
         text-decoration: black;
     } */
-    
-    .Boxtitle {
-        font-size: 30px;
-        font-weight: bold;
-        padding-left: 5%;
-        color: #4374D8;
-    }
-    
-    .WebMainPhoto {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background-size: 100% 100%;
-        background-image: url(/images/bilibiliPhoto.png);
-    }
-    
-    .WebMainName {
-        margin-left: 10px;
-        font-size: 14px;
-    }
-    
-    .MessageBox {
-        width: 250px;
-        height: 50px;
-        line-height: 50px;
-        background: #000000;
-        border-radius: 40px;
-        text-align: center;
-        color: white;
-        position: fixed;
-        bottom: 10px;
-        transform: translateY(100px);
-    }
-    
-    .MessageBox>svg {
-        width: 20px;
-        height: 20px;
-        margin-right: 10px;
-    }
-    
-    .standardRightTitle {
-        width: 100%;
-        height: 280px;
-        /* background-color: red; */
-        background: linear-gradient(to bottom right, #2E2590, #1671d3, #419AFB);
-        color: white;
-        font-weight: bold;
-        font-size: 60px;
-        padding-top: 70px;
-        box-sizing: border-box;
-        animation: standardRightTitleAnimation .4s ease-out;
-    }
-    
-    @keyframes standardRightTitleAnimation {
-        from {
-            padding-top: 50px;
+        
+        .Boxtitle {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 5%;
+            color: #4374D8;
         }
-        to {
-            padding-top: 70px;
+        
+        .WebMainPhoto {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-size: 100% 100%;
+            background-image: url(/images/bilibiliPhoto.png);
         }
-    }
-    
-    @keyframes standardLeftFixedContentAnimation {
-        from {
-            transform: translateY(30px) scale(0.2);
-            opacity: 0;
+        
+        .WebMainName {
+            margin-left: 10px;
+            font-size: 14px;
         }
-        to {
-            transform: translateY(0px) scale(1);
-            opacity: 1;
+        
+        .MessageBox {
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            background: #000000;
+            border-radius: 40px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 10px;
+            transform: translateY(100px);
         }
-    }
-    
-    .standardLeftFixedTitle>svg {
-        width: 20px;
-        height: 20px;
-        transform: translateY(4px);
-    }
-    
-    .VideoBox {
-        width: 18%;
-        margin: 10px 5px 0px 5px;
-        overflow: hidden;
-        border-radius: 4px;
-        position: relative;
-    }
-    
-    .VideoBoxHover {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.2);
-        opacity: 0;
-        transform: scale(2);
-        overflow: hidden;
-    }
-    
-    .VideoBoxHover svg {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .VideoBox:hover .VideoBoxHover {
-        transform: scale(1);
-        opacity: 1;
-    }
-    
-    .VideoBox>img {
-        width: 100%;
-    }
-    
-    .VideoBox:hover img {
-        transform: scale(1.05);
-    }
-    /* .VideoBoxBottom {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: rgba(0, 0, 0, 0.2);
-        transform: translateY(110px);
-        color: white;
-        padding-left: 20px;
-    }
-    
-    .VideoBox:hover .VideoBoxBottom {
-        transform: translateY(0px);
-        padding-top: 30px;
-        padding-left: 10px;
-    } */
-    
-    @media(max-width:1800px) {
-        .standardRightTitleFlex>div {
-            width: 25%;
-        }
-    }
-    
-    @media (max-width:1450px) {
-        .JGBox {
-            width: 22%;
-            margin: 10px;
-        }
-        .VideoBox {
-            width: 23.5%;
-        }
-    }
-    
-    @media (max-width:1280px) {
-        .standardLeft {
-            width: 24%;
-        }
-        .VideoBox {
-            width: 23.5%;
-        }
-    }
-    
-    @media (max-width:1170px) {
-        .standardLeft {
-            width: 25%;
-        }
-        .standardLeftFixed {
-            width: 100%;
-        }
-        .standardRight {
-            width: 75%;
-        }
-        .standardRightTitleFlex>div {
-            width: 30%;
-        }
-        .JGBox {
-            width: 30%;
-            margin: 5px;
-        }
-        .ColorMatchBox {
-            width: 45%;
-            margin-bottom: 10px;
-        }
-        .ColorMatch {
-            line-height: 150px;
-        }
-        .VideoBox {
-            width: 30%;
-        }
-    }
-    
-    @media (max-width:980px) {
-        .standardLeft {
-            width: 30%;
-        }
-        .standardRight {
-            width: 70%;
-        }
-        .ColorMatchBox {
-            width: 45%;
-            height: 160px;
-            /* line-height: 200px; */
-        }
-        .ColorMatch {
-            line-height: 160px;
-        }
-        .VideoBox {
-            width: 40%;
-        }
-    }
-    
-    @media (max-width:900px) {
-        .standardLeft {
-            width: 28%;
-            display: none;
-        }
-        .standardLeftFixed {
-            width: 100%;
-            display: none;
-        }
-        .standardRight {
-            width: 100%;
-            /* display: none; */
-        }
-        .Angular>div:first-child {
-            width: 150px;
-            height: 150px;
-        }
-        .standardRightTitle {
-            font-size: 40px;
-            height: 200px;
-        }
-        .standardRightTitleFlex {
-            margin-top: -70px;
-        }
-        .standardRightTitleFlex>div {
-            margin: 10px;
-            width: 30%;
-        }
-        .JGBox {
-            width: 30%;
-            margin: 5px;
-        }
-        .ColorMatchBox {
-            width: 30%;
-            height: 130px;
-        }
-        .ColorMatch {
-            line-height: 130px;
-        }
-        .VideoBox {
-            width: 30%;
-        }
-    }
-    
-    @media (max-width:650px) {
-        .xxTitle {
-            padding-left: 0px;
-            height: 40px;
-            flex-wrap: wrap;
-            padding-bottom: 10px;
-            overflow: hidden;
-        }
-        .logo {
-            margin-right: 0px;
-        }
-        .xxTitle>div {
-            margin-left: 20px;
-            flex-wrap: wrap;
-        }
-        .PhoneBtn {
-            position: absolute;
-            width: 40px;
+        
+        .MessageBox>svg {
+            width: 20px;
             height: 20px;
-            bottom: 0px;
-            right: 0px;
+            margin-right: 10px;
         }
-        .standardRightTitleFlex>div:last-child {
-            display: none;
+        
+        .standardRightTitle {
+            width: 100%;
+            height: 280px;
+            /* background-color: red; */
+            background: linear-gradient(to bottom right, #2E2590, #1671d3, #419AFB);
+            color: white;
+            font-weight: bold;
+            font-size: 60px;
+            padding-top: 70px;
+            box-sizing: border-box;
+            animation: standardRightTitleAnimation .4s ease-out;
         }
-        .standardRightTitleFlex>div {
-            margin: 10px;
-            height: 160px;
-            width: 40%;
+        
+        @keyframes standardRightTitleAnimation {
+            from {
+                padding-top: 50px;
+            }
+            to {
+                padding-top: 70px;
+            }
         }
-        .JGBox {
-            width: 45%;
-            margin: 5px;
+        
+        @keyframes standardLeftFixedContentAnimation {
+            from {
+                transform: translateY(30px) scale(0.2);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px) scale(1);
+                opacity: 1;
+            }
         }
-        .ColorMatchBox {
-            width: 80%;
-            height: 150px;
+        
+        .standardLeftFixedTitle>svg {
+            width: 20px;
+            height: 20px;
+            transform: translateY(4px);
+        }
+        
+        .VideoBox {
+            position: relative;
+            overflow: hidden;
             margin-bottom: 20px;
         }
-        .ColorMatch {
-            line-height: 150px;
+        
+        .VideoBoxMain {
+            width: 72%;
         }
-        .VideoBox {
-            margin: 2%;
-            width: 40%;
+        
+        .VideoBoxMainTitle {
+            width: 72%;
+            left: 0;
+            top: 0;
+            height: 30px;
+            line-height: 30px;
+            color: white;
+            position: absolute;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
+            font-size: 18px;
         }
-    }
-    
-    @media (min-width:650px) {
-        .PhoneBtn {
-            display: none;
+        
+        .VideoBoxMainTitle>div:first-child {
+            margin-left: 10px;
         }
-    }
-    /*修改*/
+        
+        .lxylike {
+            min-width: 40px;
+            padding: 2px 5px;
+            height: 20px;
+            background: #25AEF3;
+            border-radius: 5px;
+            /* position: absolute; */
+            text-align: center;
+            display: inline-block;
+            margin-left: 5px;
+            transform: translateY(-3px);
+            color: white;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 20px;
+        }
+        
+        .VideoBoxTable {
+            width: 28%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+        }
+        
+        .loginBox {
+            position: absolute;
+            right: 10px;
+            /* width: 150px;
+            height: 70px;
+            background-color: orange; */
+        }
+        
+        @media(max-width:1800px) {
+            .standardRightTitleFlex>div {
+                width: 25%;
+            }
+        }
+        
+        @media (max-width:1450px) {
+            .JGBox {
+                width: 22%;
+                margin: 10px;
+            }
+        }
+        
+        @media (max-width:1280px) {
+            .standardLeft {
+                width: 24%;
+            }
+        }
+        
+        @media (max-width:1170px) {
+            .standardLeft {
+                width: 25%;
+            }
+            .standardLeftFixed {
+                width: 100%;
+            }
+            .standardRight {
+                width: 75%;
+            }
+            .standardRightTitleFlex>div {
+                width: 30%;
+            }
+            .JGBox {
+                width: 30%;
+                margin: 5px;
+            }
+            .ColorMatchBox {
+                width: 45%;
+                margin-bottom: 10px;
+            }
+            .ColorMatch {
+                line-height: 150px;
+            }
+        }
+        
+        @media (max-width:980px) {
+            .standardLeft {
+                width: 30%;
+            }
+            .standardRight {
+                width: 70%;
+            }
+            .ColorMatchBox {
+                width: 45%;
+                height: 160px;
+                /* line-height: 200px; */
+            }
+            .ColorMatch {
+                line-height: 160px;
+            }
+        }
+        
+        @media (max-width:900px) {
+            .standardLeft {
+                width: 28%;
+                display: none;
+            }
+            .standardLeftFixed {
+                width: 100%;
+                display: none;
+            }
+            .standardRight {
+                width: 100%;
+                /* display: none; */
+            }
+            .Angular>div:first-child {
+                width: 150px;
+                height: 150px;
+            }
+            .standardRightTitle {
+                font-size: 40px;
+                height: 200px;
+            }
+            .standardRightTitleFlex {
+                margin-top: -70px;
+            }
+            .standardRightTitleFlex>div {
+                margin: 10px;
+                width: 30%;
+            }
+            .JGBox {
+                width: 30%;
+                margin: 5px;
+            }
+            .ColorMatchBox {
+                width: 30%;
+                height: 130px;
+            }
+            .ColorMatch {
+                line-height: 130px;
+            }
+        }
+        
+        @media (max-width:650px) {
+            .xxTitle {
+                padding-left: 0px;
+                height: 40px;
+                flex-wrap: wrap;
+                padding-bottom: 10px;
+                overflow: hidden;
+            }
+            .logo {
+                /* margin-right: 0px; */
+                margin: 0 auto;
+            }
+            .xxTitle>div {
+                /* margin-left: 20px; */
+                width: 100%;
+                padding-left: 20px;
+                flex-wrap: wrap;
+            }
+            .PhoneBtn {
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                /* bottom: 0px;
+                right: 0px; */
+                top: 13px;
+                left: 15px;
+            }
+            .standardRightTitleFlex>div:last-child {
+                display: none;
+            }
+            .standardRightTitleFlex>div {
+                margin: 10px;
+                height: 160px;
+                width: 40%;
+            }
+            .JGBox {
+                width: 45%;
+                margin: 5px;
+            }
+            .ColorMatchBox {
+                width: 80%;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+            .ColorMatch {
+                line-height: 150px;
+            }
+        }
+        
+        @media (min-width:650px) {
+            .PhoneBtn {
+                display: none;
+            }
+        }
+        /*修改*/
