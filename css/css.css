@@ -624,12 +624,37 @@
             right: 0;
         }
         
-        .loginBox {
+        .LoginBox {
+            padding-right: 20px;
             position: absolute;
-            right: 10px;
-            /* width: 150px;
-            height: 70px;
-            background-color: orange; */
+            top: 0px;
+            right: 0px;
+            height: 100%;
+            height: 60px;
+            user-select: none;
+        }
+        
+        .LogBtn {
+            width: 60px;
+            padding: 5px;
+            box-sizing: border-box;
+            background: #559EFF;
+            color: white;
+            font-weight: 200;
+            text-align: center;
+            border-radius: 3px;
+        }
+        
+        .RegisterBtn {
+            width: 60px;
+            padding: 5px;
+            margin-left: 10px;
+            box-sizing: border-box;
+            background: #73C132;
+            color: white;
+            font-weight: 200;
+            text-align: center;
+            border-radius: 3px;
         }
         
         @media(max-width:1800px) {
@@ -743,15 +768,19 @@
                 padding-bottom: 10px;
                 overflow: hidden;
             }
+            .LoginBox {
+                height: 50px;
+            }
             .logo {
                 /* margin-right: 0px; */
-                margin: 0 auto;
+                margin: 0 110px;
             }
             .xxTitle>div {
                 /* margin-left: 20px; */
                 width: 100%;
                 padding-left: 20px;
                 flex-wrap: wrap;
+                margin-top: 10px;
             }
             .PhoneBtn {
                 position: absolute;
