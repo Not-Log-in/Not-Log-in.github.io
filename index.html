@@ -21,8 +21,10 @@
             <div class="xxTitleBtn" @click="xxTitleBtnClick($event,4)">市场</div>
             <div class="xxTitleBtn" @click="xxTitleBtnClick($event,5)">开发者</div>
             <span class="PhoneBtn" @click="PhoneBtnFun">
-                <svg style="width: 100%; height:100%;" t="1642490959937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2124" width="200" height="200"><path d="M787.2 380.8c-9.6-9.6-22.4-12.8-35.2-12.8l-480 3.2c-12.8 0-25.6 3.2-35.2 12.8-19.2 19.2-19.2 48 0 67.2l240 240c0 0 0 0 0 0 0 0 0 0 0 0 3.2 3.2 9.6 6.4 12.8 9.6 0 0 3.2 3.2 3.2 3.2 16 6.4 38.4 3.2 51.2-9.6l240-243.2C806.4 428.8 803.2 400 787.2 380.8z" p-id="2125" fill="#e6e6e6"></path></svg>
+                <svg style="width: 100%; height:100%;" t="1643206831822" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2730" width="200" height="200"><path d="M901.632 896H122.368c-30.72 0-55.808-25.088-55.808-55.808v-1.536c0-30.72 25.088-55.808 55.808-55.808h779.776c30.72 0 55.808 25.088 55.808 55.808v1.536c-0.512 30.72-25.6 55.808-56.32 55.808zM901.632 568.32H122.368c-30.72 0-55.808-25.088-55.808-55.808v-1.536c0-30.72 25.088-55.808 55.808-55.808h779.776c30.72 0 55.808 25.088 55.808 55.808v1.536c-0.512 30.72-25.6 55.808-56.32 55.808zM901.632 240.64H122.368c-30.72 0-55.808-25.088-55.808-55.808v-1.536c0-30.72 25.088-55.808 55.808-55.808h779.776c30.72 0 55.808 25.088 55.808 55.808v1.536c-0.512 30.72-25.6 55.808-56.32 55.808z" p-id="2731" fill="#cdcdcd"></path></svg>
+                <!-- <svg style="width: 100%; height:100%;" t="1642490959937" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2124" width="200" height="200"><path d="M787.2 380.8c-9.6-9.6-22.4-12.8-35.2-12.8l-480 3.2c-12.8 0-25.6 3.2-35.2 12.8-19.2 19.2-19.2 48 0 67.2l240 240c0 0 0 0 0 0 0 0 0 0 0 0 3.2 3.2 9.6 6.4 12.8 9.6 0 0 3.2 3.2 3.2 3.2 16 6.4 38.4 3.2 51.2-9.6l240-243.2C806.4 428.8 803.2 400 787.2 380.8z" p-id="2125" fill="#e6e6e6"></path></svg> -->
             </span>
+            <!-- <span style="width: 50px; height: 40px; position: absolute; background:orange; top: 5px; right: 5px;"></span> -->
         </nav>
     </div>
     <div class="Flex FlexRow FlexJustCenter FlexAlignCenter">
@@ -199,60 +201,32 @@
                     </div>
                     <div class="xxContent">
                         <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart bacSize">前端效果</div>
-                        <!-- <video src="/images/前端效果-好看的折叠菜单.mp4" style="width: 80%; border-radius: 0px;" autoplay controls></video> -->
-                        <div class="standardRightTitleContent">配色搭配</div>
+                        <!-- <div class="standardRightTitleContent">站长推荐</div> -->
+                        <!-- <div class="Flex FlexRow FlexJustStart FlexAlignStart VideoBox">
+                            <div class="VideoBoxMainTitle">
+                                <div class="lxylike">站长推荐</div>
+                                <div class="lxylike">精选</div>
+                                <div class="lxylike">开源</div>
+                                <div style="text-align: center; transform: translateY(-30px);">前端效果-好看的折叠菜单</div>
+                            </div>
+                            <video class="VideoBoxMain" src="/images/前端效果-好看的折叠菜单.mp4" controls loop autoplay></video>
+                            <div class="VideoBoxTable">
+                            </div>
+                        </div>
+                        <div class="Flex FlexJustStart FlexAlignCenter Boxtitle">此视频开源代码库</div>
+                        <div class="Flex FlexJustCenter FlexAlignCenter FlexRow FlexWrap">
+                            <textarea>{{sbString[0].html}}</textarea>
+                            <textarea>{{sbString[0].css}}</textarea>
+                            <textarea>{{sbString[0].javascript}}</textarea>
+                        </div>
+                        <div class="Flex FlexJustStart FlexAlignCenter Boxtitle">颜色配备</div>
                         <div class="Flex  FlexJustCenter FlexAlignStart FlexWrap">
                             <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover" v-for="(item,index) in colorList">
                                 <template v-for="(items,indexs) in colorList[index]">
                                     <div class="ColorMatch" :style="{background:colorList[index][indexs].color}" @mouseover="ColorMatchHover(index+1,indexs,colorList[index][indexs].color)" @click="ColorMatchClick(index+1,indexs,colorList[index][indexs].color)">
                                 </template>
                             </div>
-                        </div>
-                        <div class="Flex FlexJustCenter FlexAlignCenter">
-                            <div style="width: 98%; height: 50px; line-height: 50px; text-align: center; background:white; font-size: 25px; border-radius: 20px; font-weight: bold; color: #5674DA;">站长推荐</div>
-                        </div>
-                        <div class="Flex FlexJustCenter FlexAlignCenter FlexWrap">
-                            <div class="VideoBox Flex FlexColumn">
-                                <img src="/images/明信片的设计.png" alt="">
-                                <div class="VideoBoxHover Flex FlexJustCenter FlexAlignCenter">
-                                    <a href="">
-                                        <svg t="1642657035262" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2138" width="200" height="200"><path d="M870.2 466.333333l-618.666667-373.28a53.333333 53.333333 0 0 0-80.866666 45.666667v746.56a53.206667 53.206667 0 0 0 80.886666 45.666667l618.666667-373.28a53.333333 53.333333 0 0 0 0-91.333334z" fill="#e6e6e6" p-id="2139"></path></svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="VideoBox Flex FlexColumn">
-                                <img src="/images/好看的折叠菜单.png" alt="">
-                                <div class="VideoBoxHover Flex FlexJustCenter FlexAlignCenter">
-                                    <a href="">
-                                        <svg t="1642657035262" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2138" width="200" height="200"><path d="M870.2 466.333333l-618.666667-373.28a53.333333 53.333333 0 0 0-80.866666 45.666667v746.56a53.206667 53.206667 0 0 0 80.886666 45.666667l618.666667-373.28a53.333333 53.333333 0 0 0 0-91.333334z" fill="#e6e6e6" p-id="2139"></path></svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="VideoBox Flex FlexColumn">
-                                <img src="/images/明信片的设计.png" alt="">
-                                <div class="VideoBoxHover Flex FlexJustCenter FlexAlignCenter">
-                                    <a href="">
-                                        <svg t="1642657035262" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2138" width="200" height="200"><path d="M870.2 466.333333l-618.666667-373.28a53.333333 53.333333 0 0 0-80.866666 45.666667v746.56a53.206667 53.206667 0 0 0 80.886666 45.666667l618.666667-373.28a53.333333 53.333333 0 0 0 0-91.333334z" fill="#e6e6e6" p-id="2139"></path></svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="VideoBox Flex FlexColumn">
-                                <img src="/images/好看的折叠菜单.png" alt="">
-                                <div class="VideoBoxHover Flex FlexJustCenter FlexAlignCenter">
-                                    <a href="">
-                                        <svg t="1642657035262" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2138" width="200" height="200"><path d="M870.2 466.333333l-618.666667-373.28a53.333333 53.333333 0 0 0-80.866666 45.666667v746.56a53.206667 53.206667 0 0 0 80.886666 45.666667l618.666667-373.28a53.333333 53.333333 0 0 0 0-91.333334z" fill="#e6e6e6" p-id="2139"></path></svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="VideoBox Flex FlexColumn">
-                                <img src="/images/明信片的设计.png" alt="">
-                                <div class="VideoBoxHover Flex FlexJustCenter FlexAlignCenter">
-                                    <a href="">
-                                        <svg t="1642657035262" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2138" width="200" height="200"><path d="M870.2 466.333333l-618.666667-373.28a53.333333 53.333333 0 0 0-80.866666 45.666667v746.56a53.206667 53.206667 0 0 0 80.886666 45.666667l618.666667-373.28a53.333333 53.333333 0 0 0 0-91.333334z" fill="#e6e6e6" p-id="2139"></path></svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="xxContent">
                         <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">学习笔记</div>
@@ -277,6 +251,7 @@
     </div>
     <script src=" https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.min.js "></script>
     <script src="/js/jquery-1.12.4.js "></script>
+    <script src="/sb.js"></script>
     <script src="/js/js.js "></script>
     <script>
         const app = Vue.createApp({
@@ -293,7 +268,7 @@
                     var PhoneBtn = $(".PhoneBtn ")[0];
                     PhoneBtn.style.transition = "all .2s ease-out ";
                     if (this.xxTitleIndex % 2 == 0) {
-                        xxTitle.style.height = "80px ";
+                        xxTitle.style.height = "260px ";
                         PhoneBtn.style.transform = "rotate(180deg) ";
                         // return;
                     } else {
@@ -320,7 +295,8 @@
                 return {
                     //外部数组内返回类型，在内查找元素详细参数
                     //ES6语法 键值对相同 可以就写一个
-                    colorList
+                    colorList,
+                    sbString
                 }
             },
             methods: {
