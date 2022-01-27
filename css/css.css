@@ -767,6 +767,7 @@
                 flex-wrap: wrap;
                 padding-bottom: 10px;
                 overflow: hidden;
+                padding-bottom: 20px;
             }
             .LoginBox {
                 height: 50px;
