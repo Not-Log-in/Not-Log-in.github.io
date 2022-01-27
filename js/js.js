@@ -180,10 +180,15 @@ function myvideoByeFun() {
     }
 }
 window.onresize = function() {
+    var xxTitle = document.getElementsByClassName("xxTitle")[0];
+    var PhoneBtn = document.getElementsByClassName("PhoneBtn")[0];
     if (document.body.clientWidth > 650) {
         xxTitle.style.height = "60px";
+        console.log("awdawd");
     } else {
+        PhoneBtn.style.transform = "rotate(0deg) ";
         xxTitle.style.height = "40px";
+        console.log("OKOK");
         myvideoByeFun();
     }
 }
