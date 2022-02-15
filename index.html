@@ -24,8 +24,8 @@
                 <svg style="width: 100%; height:100%;" t="1643206831822" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2730" width="200" height="200"><path d="M901.632 896H122.368c-30.72 0-55.808-25.088-55.808-55.808v-1.536c0-30.72 25.088-55.808 55.808-55.808h779.776c30.72 0 55.808 25.088 55.808 55.808v1.536c-0.512 30.72-25.6 55.808-56.32 55.808zM901.632 568.32H122.368c-30.72 0-55.808-25.088-55.808-55.808v-1.536c0-30.72 25.088-55.808 55.808-55.808h779.776c30.72 0 55.808 25.088 55.808 55.808v1.536c-0.512 30.72-25.6 55.808-56.32 55.808zM901.632 240.64H122.368c-30.72 0-55.808-25.088-55.808-55.808v-1.536c0-30.72 25.088-55.808 55.808-55.808h779.776c30.72 0 55.808 25.088 55.808 55.808v1.536c-0.512 30.72-25.6 55.808-56.32 55.808z" p-id="2731" fill="#cdcdcd"></path></svg>
             </span>
             <span class="Flex FlexJustStart FlexAlignCenter LoginBox">
-                <div class="LogBtn">登录</div>
-                <div class="RegisterBtn">注册</div>
+                <div class="LogBtn" @click="LoginFun">登录</div>
+                <div class="RegisterBtn" @click="RegisterFun">注册</div>
             </span>
         </nav>
     </div>
@@ -203,8 +203,8 @@
                     </div>
                     <div class="xxContent">
                         <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart bacSize">前端效果</div>
-                        <!-- <div class="standardRightTitleContent">站长推荐</div> -->
-                        <!-- <div class="Flex FlexRow FlexJustStart FlexAlignStart VideoBox">
+                        <!-- <div class="standardRightTitleContent">站长推荐</div>
+                        <div class="Flex FlexRow FlexJustStart FlexAlignStart VideoBox">
                             <div class="VideoBoxMainTitle">
                                 <div class="lxylike">站长推荐</div>
                                 <div class="lxylike">精选</div>
@@ -212,15 +212,14 @@
                                 <div style="text-align: center; transform: translateY(-30px);">前端效果-好看的折叠菜单</div>
                             </div>
                             <video class="VideoBoxMain" src="/images/前端效果-好看的折叠菜单.mp4" controls loop autoplay></video>
-                            <div class="VideoBoxTable">
-                            </div>
+                            <div class="VideoBoxTable"></div>
                         </div>
                         <div class="Flex FlexJustStart FlexAlignCenter Boxtitle">此视频开源代码库</div>
                         <div class="Flex FlexJustCenter FlexAlignCenter FlexRow FlexWrap">
                             <textarea>{{sbString[0].html}}</textarea>
                             <textarea>{{sbString[0].css}}</textarea>
                             <textarea>{{sbString[0].javascript}}</textarea>
-                        </div>
+                        </div> -->
                         <div class="Flex FlexJustStart FlexAlignCenter Boxtitle">颜色配备</div>
                         <div class="Flex  FlexJustCenter FlexAlignStart FlexWrap">
                             <div class="ColorMatchBox Flex FlexRow" @mouseleave="ColorMatchNoHover" v-for="(item,index) in colorList">
@@ -228,7 +227,7 @@
                                     <div class="ColorMatch" :style="{background:colorList[index][indexs].color}" @mouseover="ColorMatchHover(index+1,indexs,colorList[index][indexs].color)" @click="ColorMatchClick(index+1,indexs,colorList[index][indexs].color)">
                                 </template>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="xxContent">
                         <div class="standardRightTitle Flex FlexJustCenter FlexAlignStart">学习笔记</div>
@@ -246,12 +245,13 @@
             </div>
         </div>
         <!--提示区-->
+        <!-- <div class="TopMessageBox">该功能暂时不可用</div> -->
         <div class="MessageBox Flex FlexJustCenter FlexAlignCenter" <svg t="1642649212762" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2141" width="200" height="200">
             <svg t="1642649247447" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2332" width="200" height="200"><path d="M416.832 798.08C400.64 798.08 384.512 791.872 372.16 779.52L119.424 525.76C94.784 500.992 94.784 460.8 119.424 436.032 144.128 411.264 184.128 411.264 208.768 436.032L416.832 644.928 814.4 245.76C839.04 220.928 879.04 220.928 903.744 245.76 928.384 270.528 928.384 310.656 903.744 335.424L461.504 779.52C449.152 791.872 432.96 798.08 416.832 798.08Z" p-id="2333" fill="#e6e6e6"></path></svg>
             <span>颜色已复制到剪切板</span>
         </div>
     </div>
-    <script src=" https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.min.js "></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.2.0-beta.7/vue.global.min.js"></script>
     <script src="/js/jquery-1.12.4.js "></script>
     <script src="/sb.js"></script>
     <script src="/js/js.js "></script>
@@ -260,6 +260,7 @@
             data() {
                 return {
                     xxTitleIndex: 1,
+
                 }
             },
             methods: {
@@ -289,6 +290,12 @@
                     xxTitleDiv[number].style.transition = "all .2s ease-out";
                     xxContent[number].style.display = "inline-block";
                 },
+                LoginFun() { //登录使用的函数
+                    alert("目前不可以使用");
+                },
+                RegisterFun() { //注册使用的函数
+                    alert("目前不可用");
+                }
             },
         });
         app.mount("#app");
@@ -298,7 +305,7 @@
                     //外部数组内返回类型，在内查找元素详细参数
                     //ES6语法 键值对相同 可以就写一个
                     colorList,
-                    // sbString
+                    sbString
                 }
             },
             methods: {
